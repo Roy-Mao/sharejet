@@ -1,0 +1,226 @@
+{% extends "layout.html" %}
+{% from "_formhelpers.html" import render_field %}
+
+{% block title %}
+    Chat room
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	{{super()}}
+	<link rel="stylesheet" href = "{{ url_for('static', filename='jquery.emojipicker.css') }}">
+	<link rel="stylesheet" href = "{{ url_for('static', filename='jquery.emojipicker.a.css') }}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+	<link rel="stylesheet" href = "{{ url_for('static', filename='mychat.css') }}">
+{% endblock %}
+
+{% block main %}
+	<div class="container">
+    <div id = "userid">{{userid}}</div>
+		<div class="container-fluid">
+		<h2 class="h_title">{{_('Welcome Onboard')}}</h2>
+			<div class="s_design">
+				<span class="f_info"><b id="set_number">{{flightnumber}}</b></span><br><span><b id="set_time">{{startdate}}</b></span><br><br>
+				<span class="f_info"><b class = "uppercase" id="set_leave">{{leaving_city}}</b> <i style="font-size:25px" class="fa">&#xf178;</i> <b class = "uppercase" id="set_arrive">{{arriving_city}}</b></span>
+			</div>
+		<!--<hr>-->
+		</div>
+	</div>
+
+<div class="container app">
+  <div class="app-one">
+    <div class="col-sm-4 side">
+      <div class="side-one">
+        <div class="row heading">
+          <div class="col-sm-3 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon">
+              <a id="gotoprofile" href="{{url_for('myprofile')}}" data-toggle="tooltip" data-placement="top" title="see profile">
+                <img class = "img_right_heading">
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot  pull-right" id = "notice_show">
+            <!--<i class="fa fa-ellipsis-v fa-2x  pull-right" aria-hidden="true"></i>-->
+            <i class="fa fa-question fa-2x" aria-hidden="true"></i>
+          </div>
+          <div class="col-sm-5 col-xs-5 heading-compose pull-right">
+            <!--<i class="fa fa-comments fa-2x  pull-right" aria-hidden="true"></i>-->
+              <!--<div class="btn-group open">-->
+                <div class="btn btn-primary btn-sm dropdown-toggle" title="Toggle dropdown menu" data-toggle="dropdown"><i class="fa fa-plus fa-fw"></i> {{_('Request')}}</div>
+                  <ul class="dropdown-menu">
+                    <li onclick = "chooseForm(this)" id = "toflight"><a>{{_('To passengers on this flight')}}</a></li>
+                    <li onclick = "chooseForm(this)" id = "toroute"><a> {{_('To passengers on this route')}}</a></li>
+                  </ul>
+              <!--</div>-->
+          </div>
+        </div>
+
+        <div class="searchBox">
+          <div class="col-sm-12 searchBox-inner">
+            <div class="form-group has-feedback">
+              <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Search">
+              <span class="glyphicon glyphicon-search form-control-feedback"></span>
+            </div>
+          </div>
+        </div>
+
+        <!--up to this point it is heading above the search box-->
+
+        <div class="sideBar">
+			<div class="sideBar-body" onclick="chooseUser(this)" id="sdid_all">
+				<div class="col-sm-3 col-xs-3 sideBar-avatar">
+					<div class="avatar-icon">
+						<img src="/static/img/groupchat.jpg">
+					</div>
+				</div>
+				<div class="col-sm-9 col-xs-9 sideBar-main">
+			    	<div class="row">
+			    		<div class="col-sm-8 col-xs-8 sideBar-name">
+			        		<span class="name-meta"> {{_('All Passengers')}}  </span>
+			        	</div>
+			        	<div class="col-sm-4 col-xs-4 pull-right sideBar-time">
+			            	<span class="time-meta pull-right"> </span>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<div id="left_dynamic">
+				<div id = "online_section"></div>
+				<div id= "offline_section"></div>
+			</div>
+		</div> <!--close the row sidebar tag contact info-->
+
+      </div> <!--close the side-one tag-->
+    </div> <!--close the col-sm-4 tag-->
+
+    <!--the my_wrapper class contains all the static and dynamic page on the right side, that is everything you need to know on the right panel-->
+    <div class="my_wrapper">
+      <!--The first static div section, no matter what, it show the request form that all users share-->
+      <div class="col-sm-8 conversation each_conversation" id = "conversation_form">
+        <div class="row heading">
+          <!--<div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon">
+            </div>
+          </div>-->
+          <div class="col-sm-10 col-xs-9 heading-name">
+            <!--<a class="heading-name-meta" id="form_heading">-->
+              <h5 id = "broadcast_heading"></h5>
+            <!--</a>-->
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+            <i class="fa fa-question fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div id="form_panel">
+          <form method=POST action="{{ url_for('flyreq') }}">
+            <dl>
+            {{ form.hidden_tag() }}
+              <div class="form-group">
+                {{ render_field(form.requesttext, class ='form-control')}}
+                {{ render_field(form.moneyamount, class ='form-control')}}
+                {{ render_field(form.email, class = 'form-control')}}
+                <input type="hidden" name="leaving_city" id="flc" value="None">
+                <input type="hidden" name="arriving_city" id="fac" value="None">
+                <input type="hidden" name="flightnumber" id="ff" value="">
+                <input type="hidden" name="event_date" id="fed" value="None">
+                <input type="hidden" name="username" id="fu" value="None">
+                <input class = "btn btn-primary btn-md" type = "submit" value = "Submit"/>
+              </div>
+          </form>
+        </div>
+      </div> 
+      <!--The first static section div ends here-->
+
+
+
+      <!--The second static section div starts here, it contains a welcome title and a no_notice class to show the notice the user needs to know-->
+      <div class="col-sm-8 conversation" id = "conversation_title">
+        <div class="row heading">
+          <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon">
+              <!--<img class="img_right_heading">-->
+            </div>
+          </div>
+          <div class="col-sm-8 col-xs-7 heading-name">
+            <p class="heading-name-meta" id="toall_heading">
+            </p>
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+            <i class="fa fa-question fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class = "no_notice">
+  	      <p>{{_('1. Here is the list of people on the same flight with you. If you see no one in the chatting room, double check if the flight number is right.(eg: 3U8833)')}}</p><br>
+  	      <p>{{_('2. As long as you find the right person, you can: Tourgide/travel company/Package rearrange/Seats exchange/Free ride to downtown..The list goes on..')}}</p><br>
+  	      <p>{{_('3. Click "All Passengers" to broadcast your need to people on the same flight or on the same route')}}</p><br>
+  	      <p>{{_('4. You can also choose a user to have private conversation.')}}</p><br>
+  	      <p>{{_('5. Good luck and enjoy your journey!')}}</p>
+        </div>
+      </div>
+      <!--The second static section div ends here-->
+
+
+      <!--The third static section div starts here, it contains the all passengers chatting page on the right panel, which is the same for every user in this room-->
+      <div class="col-sm-8 conversation each_conversation" id = "page_all">
+        <div class="row heading">
+          <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+            <div class="heading-avatar-icon">
+              <img src="/static/img/groupchat.jpg">
+            </div>
+          </div>
+          <div class="col-sm-8 col-xs-7 heading-name">
+            <a class="heading-name-meta">{{_('All Passengers')}}
+            </a>
+          </div>
+          <div class="col-sm-1 col-xs-1  heading-dot pull-right">
+            <i class="fa fa-question fa-2x  pull-right" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="row message" id="conversation_all">
+        	<p class="no_message">{{_('No message yet!')}}</p>
+        </div>
+          <div class="row reply">
+            <div class="col-sm-1 col-xs-1 reply-emojis" onclick = "chooseEmoji(username = 'all')" id="emoji_trigger_all">
+              <i class="fa fa-smile-o fa-2x"></i>
+            </div>
+            <div class="col-sm-9 col-xs-9 reply-main">
+              <textarea class="form-control pickupaemoji" rows="1" id = "comment_all"></textarea>
+            </div>
+            <div class="col-sm-1 col-xs-1 reply-images">
+              <form method=POST enctype=multipart/form-data>
+                <label for="upload_all">
+                  <i class="fa fa-file-image-o fa-2x" aria-hidden="true"></i>
+                </label>
+                  <input type="file" id = "upload_all" name = "chat_photo" accept="image/*" capture="camera" onchange="chooseUpload(this, username = 'all')"/>
+              <form>
+            </div>
+            <div class="col-sm-1 col-xs-1 reply-send" onclick = "readytoSend(this, username='all')" id = "readytoSend_all">
+              <i class="fa fa-send fa-2x" aria-hidden="true"></i>
+            </div>
+          </div>
+      </div>
+      <!--The third static section div ends here-->
+
+      <div id='right_dynamic'>
+      </div>
+    </div> 
+    <!--end of my wrapper-->
+
+  </div> <!--close app-one tag the whole thing-->
+</div> <!--close the class app container here-->
+
+		<!--END HERE: copy and paste from a perfect template-->
+{% endblock main %}
+
+
+{% block scripts %}
+	{{super()}}
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="{{ url_for('static', filename='jquery.emojipicker.js') }}"></script>
+    <script src="{{ url_for('static', filename='jquery.emojis.js') }}"></script>
+    <script src="{{ url_for('static', filename='mychat.js') }}"></script>
+{% endblock scripts %}

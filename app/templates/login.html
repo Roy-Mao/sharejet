@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h2 class="h_title">{{_('Yo!Login')}}</h2>
+
+        <form action="{{ url_for('login') }}" method="post" id="login_form">
+            {{wtf.quick_form(form)}}
+        </form>
+
+        <div class="form-group" id="log_btn">
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+                <button class="btn btn-primary btn-md" type="submit" form="login_form"><span class="glyphicon glyphicon-log-in"></span> {{_('Log In')}}</button>
+            </div>
+            <a href="{{ url_for('register') }}" class="btn btn-primary btn-md" role="button"><span class="glyphicon glyphicon-user"></span> {{_('Sign Up')}}</a>
+        </div>
+        
+    </div>
+{% endblock %}

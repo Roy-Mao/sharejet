@@ -1,0 +1,239 @@
+#contact_title
+{
+	color: #648880;
+	margin-bottom: 5px;
+}
+
+#slideImg 
+{
+  border-radius: 70px;
+  margin: 0 auto;
+  background-color:black;
+  /*padding: 10px 20px;*/
+  padding: 10px 0;
+  position: relative;
+}
+
+#slideImg ul 
+{ 
+  list-style: none; 
+}
+
+#slideImg li 
+{
+  float: left;
+  margin: 0;
+}
+
+.rimg
+{ 
+  vertical-align: bottom; 
+  border:5px solid #fff; 
+  max-width: 300px;
+  height: auto;
+}
+
+.rotate-prev { position: absolute; }
+
+#under_pic
+{
+	padding-left:5px;
+	padding-right:5px;
+	margin-left:5px;
+	margin-right:5px;
+}
+
+.left_word
+{
+	width: 50%;
+	display: inline-block;
+	margin-right: 30px;
+	text-align: left;
+}
+
+#right_form
+{
+	width: 30%;
+	display: inline-block;
+	vertical-align:top;
+}
+
+h2
+{
+	font-size: 20px;
+}
+
+h2, h4
+{
+	color: #648880;
+	font-family: Lato, "Open Sans", "Helvetica Neue", Helvetic, Arial, sans-serif;
+}
+
+h5, p
+{
+	color: #ddd;
+}
+
+.join_us
+{
+	text-align: left;
+	color: #ddd;
+}
+
+.form-control
+{
+	background-color: #ddd;
+}
+
+#donai
+{
+	width: 100%;
+	display:inline-block;
+	color: #ddd;
+}
+
+.logo_div
+{
+	max-width: 80px;
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 45px;
+}
+
+#wechat_logo,
+#bitcoin_logo
+{
+	max-width: 25px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+
+#wechat_qr
+{
+	max-width: 80px;
+	display: inline-block;
+}
+
+#bitcoin_qr
+{
+	max-width: 82px;
+	display: inline-block;
+}
+
+#contactusbtn
+{
+	margin-bottom:10px;
+}
+
+
+
+/* Contact form */
+form label {
+  font-size: 1.0em;
+  /*font-weight: bold;*/
+  display: block;
+  padding: 5px 0;
+}
+ 
+form input#name,
+form input#email,
+form input#subject {
+  /*width: 400px;*/
+  width: 90%;
+  max-width: 300px;
+  /*background-color: #fafafa;*/
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  background-color: #ddd;
+  padding: 5px;
+  font-size: 1.1em;
+  color: black;
+}
+ 
+form textarea#message {
+  /*width: 500px;*/
+  width: 90%;
+  max-width: 300px;
+  height: 78px;
+  /*background-color: #fafafa;*/
+  background-color: #ddd;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1.1em;
+  color: black;
+}
+ 
+form input#submit {
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+  -webkit-border-radius: 5px; 
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  /*border:1px solid #d8d8d8;*/
+  border: 1px solid #008CBA;
+  padding: 5px; 
+  font-weight:bold; 
+  text-align: center; 
+  color: white;
+  /*background-color: #f4f4f4;*/
+  background-color: #008CBA;
+  /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -ms-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);*/
+}
+ 
+form input#submit:hover{
+  cursor: pointer;
+  border:1px solid #c1c1c1; 
+  background-color: #dbdbdb;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -moz-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -ms-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -o-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: linear-gradient(top, #dbdbdb, #cccccc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#dbdbdb, endColorstr=#cccccc);
+}
+
+/* Message flashing */
+.flash 
+{
+  /*background-color: #FBB0B0;*/
+  background-color:black;
+  color: red;
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+@media screen and (max-width: 768px)
+{
+	.left_word
+	{
+		text-align: center;
+		width: 100%;
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 15px;
+		display: block;
+	}
+
+	#right_form
+	{
+		width: 100%;
+		display: block;
+		max-width: 320px;
+		margin: auto;
+
+	}
+}

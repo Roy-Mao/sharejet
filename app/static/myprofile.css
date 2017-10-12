@@ -1,0 +1,143 @@
+.img-circle
+{
+	max-width: 55px;
+	max-height: 55px;
+	width: 100%;
+	height: 100%;
+}
+
+#item
+{
+	max-width: 200px;
+	width: 30%;
+}
+
+input[type="file"] 
+{
+  display: none;
+}
+
+#pic_div
+{
+	width: 100%;
+	height:100%;
+	max-width:80px;
+	max-height: 80px;
+	margin-bottom: 15px;
+}
+
+#outer_change
+{
+	width:100%;
+	height: 100%;
+	max-width: 300px;
+	max-height: 300px;
+	margin:auto;
+	display:none;
+}
+
+
+.probtn
+{
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+
+
+
+.profile-pic {
+    border-radius: 50%;
+    cursor: pointer;
+    /*max-width: 80px;
+    max-height: 80px;*/
+    /*background-image: url("https://s3-eu-west-1.amazonaws.com/lynks-blog/wp-content/uploads/2016/10/11153439/rsz_1shutterstock_325243652.jpg");*/
+    height: 55px;
+    width: 55px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic-browse {
+    border-radius: 50%;
+    /*cursor: pointer;*/
+    /*max-width: 80px;
+    max-height: 80px;*/
+    /*background-image: url("https://s3-eu-west-1.amazonaws.com/lynks-blog/wp-content/uploads/2016/10/11153439/rsz_1shutterstock_325243652.jpg");*/
+    height: 55px;
+    width: 55px;
+    background-size: cover;
+    background-position: center;
+    /*background-blend-mode: multiply;
+    vertical-align: middle;
+    text-align: center;
+    color: transparent;
+    transition: all .3s ease;
+    text-decoration: none;*/
+}
+
+.profile-pic:hover {
+    background-color: rgba(0,0,0,.5);
+    z-index: 10000;
+    color: #fff;
+    transition: all .3s ease;
+    text-decoration: none;
+}
+
+.profile-pic span {
+    display: inline-block;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 0.9em;
+}
+
+#c_icon
+{
+	margin-top:5px;
+}
+
+h3
+{
+	margin-top:0;
+}
+
+.help-block
+{
+    display:none !important;
+}
+
+.editable-click, a.editable-click,
+a.editable-click:hover
+{
+    border-bottom: none;
+}
+
+a
+{
+    color: #ddd;
+}
+
+.h_title
+{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#ccenter
+{
+    margin-top: 35px;
+}
+
+#hiddenid
+{
+    display: none;
+}
+
+
+

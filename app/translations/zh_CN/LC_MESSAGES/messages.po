@@ -1,0 +1,682 @@
+# Chinese (Simplified, China) translations for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-09-15 17:09+0900\n"
+"PO-Revision-Date: 2017-09-15 00:33+0900\n"
+"Last-Translator: \n"
+"Language: zh_Hans_CN\n"
+"Language-Team: zh_Hans_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.5.0\n"
+
+#: env/lib/python3.6/site-packages/flask_wtf/file.py:51
+#: env/lib/python3.6/site-packages/wtforms/validators.py:203
+#: env/lib/python3.6/site-packages/wtforms/validators.py:243
+msgid "This field is required."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/flask_wtf/file.py:85
+msgid "File does not have an approved extension: {extensions}"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/flask_wtf/file.py:90
+msgid "File does not have an approved extension."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/passlib/ext/django/utils.py:957
+msgid "algorithm"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:56
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:64
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:97
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:100
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:103
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:139
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:141
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:143
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:275
+msgid "Invalid input."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:301
+#: env/lib/python3.6/site-packages/wtforms_components/validators.py:191
+msgid "Invalid email address."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:335
+msgid "Invalid IP address."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:386
+msgid "Invalid Mac address."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:415
+msgid "Invalid URL."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:436
+msgid "Invalid UUID."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:464
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/validators.py:496
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/csrf/core.py:98
+#: env/lib/python3.6/site-packages/wtforms/ext/csrf/form.py:47
+msgid "Invalid CSRF Token"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/csrf/session.py:61
+#: env/lib/python3.6/site-packages/wtforms/ext/csrf/session.py:58
+msgid "CSRF token missing"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/csrf/session.py:69
+#: env/lib/python3.6/site-packages/wtforms/ext/csrf/session.py:66
+msgid "CSRF failed"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/csrf/session.py:74
+#: env/lib/python3.6/site-packages/wtforms/ext/csrf/session.py:71
+msgid "CSRF token expired"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/ext/appengine/fields.py:87
+#: env/lib/python3.6/site-packages/wtforms/ext/appengine/fields.py:164
+#: env/lib/python3.6/site-packages/wtforms/ext/appengine/fields.py:166
+#: env/lib/python3.6/site-packages/wtforms/ext/django/fields.py:95
+#: env/lib/python3.6/site-packages/wtforms/ext/sqlalchemy/fields.py:125
+#: env/lib/python3.6/site-packages/wtforms/ext/sqlalchemy/fields.py:127
+#: env/lib/python3.6/site-packages/wtforms/ext/sqlalchemy/fields.py:180
+#: env/lib/python3.6/site-packages/wtforms/ext/sqlalchemy/fields.py:185
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:472
+#: env/lib/python3.6/site-packages/wtforms_components/fields/select.py:63
+msgid "Not a valid choice"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/ext/appengine/fields.py:185
+msgid "Not a valid list"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/ext/appengine/fields.py:204
+msgid "Not a valid integer list"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/ext/dateutil/fields.py:63
+msgid "Please input a date/time value"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/ext/dateutil/fields.py:75
+#: env/lib/python3.6/site-packages/wtforms/ext/dateutil/fields.py:83
+msgid "Invalid date/time input"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:465
+msgid "Invalid Choice: could not coerce"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:498
+#: env/lib/python3.6/site-packages/wtforms_components/fields/select_multiple.py:24
+msgid "Invalid choice(s): one or more data inputs could not be coerced"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:505
+#: env/lib/python3.6/site-packages/wtforms_components/fields/select_multiple.py:36
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:588
+msgid "Not a valid integer value"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:654
+msgid "Not a valid decimal value"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:681
+msgid "Not a valid float value"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:742
+msgid "Not a valid datetime value"
+msgstr ""
+
+#: env/lib/python3.6/site-packages/wtforms/fields/core.py:759
+msgid "Not a valid date value"
+msgstr ""
+
+#: templates/aboutus.html:13
+msgid "About Us"
+msgstr "关于我们"
+
+#: templates/aboutus.html:23
+msgid "Waseda University, Japan"
+msgstr "早稻田大学"
+
+#: templates/aboutus.html:24
+msgid "Chengdu, China"
+msgstr "中国成都"
+
+#: templates/aboutus.html:25
+msgid "Programmer"
+msgstr "码农"
+
+#: templates/aboutus.html:26
+msgid ""
+"Hey! I from Chengdu, China and a graduate student from Waseda University,"
+" Japan. I learn fast and am enthusiastic about web technology. I am "
+"generally interested in both human (Chinese, Japanese and English) and "
+"computer languages(python, Javascript, C). I believe technology makes our"
+" life better and easier. I like the concept of open source, knowledge-"
+"sharing and team cooperation and so this site is created as part of my "
+"class project. Hope you enjoy it and give us your precious feedback so "
+"that we can keep improving this site and making it better.^.^."
+msgstr "早大成都人, 成都早大人。喜爱开源项目，机器学习。健身和代码就是生活！期待您的反馈和联络。"
+
+#: templates/aboutus.html:44
+msgid "University of Washington, U.S"
+msgstr "华盛顿大学"
+
+#: templates/aboutus.html:45
+msgid "Seattle, U.S"
+msgstr "美国西雅图"
+
+#: templates/aboutus.html:46
+msgid "Public Relations"
+msgstr "公共关系"
+
+#: templates/aboutus.html:47
+msgid ""
+"Ryan is a native of Kirkland, WA and currently resides in Seattle, WA. In"
+" 2011 he earned his Bachelor degree in Philosophy and Religious Studies "
+"at Central Washington University before moving back to Seattle to work on"
+" a series of start-up projects. In 2015, Ryan entered graduate school at "
+"the University of Washington where he earned his MA in Japan Studies from"
+" the Jackson School of International Studies in 2017, after which he "
+"worked at MSL Tokyo Office as an intern and spent time with me together "
+"creating this site."
+msgstr "Ryan是华盛顿州柯克兰的土著居民，现居西雅图。在接手一系列创业项目之前在中央华盛顿大学学习。他于2015年进入华盛顿大学杰克逊学院攻读日本学硕士。硕士课程结束后他在MSL东京分所从事公共关系工作。"
+
+#: templates/contactus.html:38
+msgid "Donation Support"
+msgstr "支援帮助"
+
+#: templates/contactus.html:39
+msgid "Please donate a small amount to keep us alive"
+msgstr "各位款爷, 请让我感受一下世界的善意"
+
+#: templates/contactus.html:40
+msgid ""
+"We created this site with the hope that people can help each other during"
+" our life journey and make more friends in real life through technology. "
+"We collect the donation partly for the site maintainance and other than "
+"that, we will donate the money to assist children learning computer "
+"science in least developed countries. "
+msgstr ""
+"我们希望借助网络和科技拉。一命二运三风水四积阴德五读书。募捐款项除了用于基本维持网站运行外会捐给慈善基金会资助第三世界国家的小朋友学习计算机科学。感谢您的支持"
+" "
+
+#: templates/contactus.html:41
+msgid "Join Us?"
+msgstr "加入我们？"
+
+#: templates/contactus.html:43
+msgid "Database Designer"
+msgstr "数据库设计"
+
+#: templates/contactus.html:44
+msgid "Web Application Engineer"
+msgstr "网站制作设计工程师"
+
+#: templates/contactus.html:45
+msgid "Front-end Engineer(Javascript, bootstrap)"
+msgstr "前段工程师(Javascript, bootstrap)"
+
+#: templates/contactus.html:46
+msgid "Back-end server-side Engineer.(Python, php, Flask framework)"
+msgstr "后端全栈及服务器雨呀工程师(Python, php, Flask 网络框架)"
+
+#: templates/contactus.html:47
+msgid "C# and Java (ios/android enginner)"
+msgstr "C#和Java(ios以及安卓工程师)"
+
+#: templates/contactus.html:48
+msgid "Cooperationa and Sponsorship"
+msgstr "任何形式的合作与赞助"
+
+#: templates/info.html:17 templates/layout.html:61
+msgid "Dashboard"
+msgstr "控制台"
+
+#: templates/info.html:20
+msgid "Here to checkout all your flight schedules and requests."
+msgstr "这里能看到你所有的航班日程以及请求."
+
+#: templates/info.html:23
+msgid "Schedules"
+msgstr "航班日程"
+
+#: templates/info.html:27
+msgid "Flight Number"
+msgstr "航班号"
+
+#: templates/info.html:28 templates/info.html:66 templates/thehelp.html:27
+#: templates/thehelp.html:93
+msgid "From"
+msgstr "起飞地点"
+
+#: templates/info.html:29 templates/info.html:67 templates/thehelp.html:28
+#: templates/thehelp.html:94
+msgid "To"
+msgstr "到达地点"
+
+#: templates/info.html:30 templates/info.html:68 templates/thehelp.html:30
+#: templates/thehelp.html:95
+msgid "Departure Date"
+msgstr "计划日期"
+
+#: templates/info.html:31
+msgid "Join/Delete"
+msgstr "进入/删除"
+
+#: templates/info.html:48 templates/quote.html:45
+msgid "Join"
+msgstr "进入"
+
+#: templates/info.html:48 templates/info.html:82
+msgid "Del"
+msgstr "删除"
+
+#: templates/info.html:54 templates/info.html:109
+msgid "NO REQUEST YET"
+msgstr "暂无请求"
+
+#: templates/info.html:62
+msgid "Requests"
+msgstr "请求"
+
+#: templates/info.html:69 templates/thehelp.html:31 templates/thehelp.html:96
+msgid "Pay"
+msgstr "奖励"
+
+#: templates/info.html:70
+msgid "Delete"
+msgstr "删除"
+
+#: templates/info.html:90
+msgid "Your request has been broadcast the following flights:"
+msgstr "已广播你的需求到下列航班："
+
+#: templates/info.html:101
+msgid "No flights available at the moment"
+msgstr "暂无航班"
+
+#: templates/layout.html:62
+msgid "Flight Chat"
+msgstr "航班聊天"
+
+#: templates/layout.html:63
+msgid "Offer Help"
+msgstr "我来帮"
+
+#: templates/layout.html:64
+msgid "User Guide"
+msgstr "使用指南"
+
+#: templates/layout.html:66
+msgid "Settings"
+msgstr "设置"
+
+#: templates/layout.html:68
+msgid "Edit Profile"
+msgstr "编辑资料"
+
+#: templates/layout.html:69 templates/resetpw.html:10
+msgid "Reset Password"
+msgstr "重置密码"
+
+#: templates/layout.html:70
+msgid "Log Out"
+msgstr "退出"
+
+#: templates/layout.html:74 templates/layout.html:88
+msgid "Languages"
+msgstr "语言"
+
+#: templates/layout.html:76 templates/layout.html:90
+msgid "English"
+msgstr "英语"
+
+#: templates/layout.html:77 templates/layout.html:91
+msgid "Chinese"
+msgstr "中文"
+
+#: templates/layout.html:78 templates/layout.html:92
+msgid "Japanese"
+msgstr "日语"
+
+#: templates/layout.html:85 templates/login.html:20
+msgid "Sign Up"
+msgstr "注册"
+
+#: templates/layout.html:86 templates/login.html:18
+msgid "Log In"
+msgstr "登陆"
+
+#: templates/layout.html:123 templates/welcome.html:42
+msgid "About"
+msgstr "关于我们"
+
+#: templates/layout.html:124 templates/welcome.html:44
+msgid "Locations"
+msgstr "地点"
+
+#: templates/layout.html:125 templates/thehelp.html:32
+#: templates/thehelp.html:97 templates/welcome.html:43
+msgid "Contact"
+msgstr "联系我们"
+
+#: templates/layout.html:129
+msgid "ShareJet"
+msgstr "共享航班"
+
+#: templates/login.html:10
+msgid "Yo!Login"
+msgstr "Yo!登陆"
+
+#: templates/mychat.html:21
+msgid "Welcome Onboard"
+msgstr "欢迎乘机"
+
+#: templates/mychat.html:49
+msgid "Request"
+msgstr "我的需求"
+
+#: templates/mychat.html:51
+msgid "To passengers on this flight"
+msgstr "广播给当日此次航班上的乘客"
+
+#: templates/mychat.html:52
+msgid "To passengers on this route"
+msgstr "广播给当日此条路线上的乘客"
+
+#: templates/mychat.html:79 templates/mychat.html:174
+msgid "All Passengers"
+msgstr ""
+
+#: templates/mychat.html:155
+msgid ""
+"1. Here is the list of people on the same flight with you. If you see no "
+"one in the chatting room, double check if the flight number is right.(eg:"
+" 3U8833)"
+msgstr "1.这些是和你乘坐同一航班的乘客，如果没有人的话可以检查一下航班号是否正确。比如JA001没人的话就试试JA1或者JA01"
+
+#: templates/mychat.html:156
+msgid ""
+"2. As long as you find the right person, you can: Tourgide/travel "
+"company/Package rearrange/Seats exchange/Free ride to downtown..The list "
+"goes on.."
+msgstr "2.在这里你或许可以找到当地的导游，一起去目的地旅行的新朋友。也可能找同一航班的人帮你捎带一下你过重过多的行李，交换一个靠窗的座位。运气好的话可以顺便搭个顺风车去市区等等。"
+
+#: templates/mychat.html:157
+msgid ""
+"3. Click \"All Passengers\" to broadcast your need to people on the same "
+"flight or on the same route"
+msgstr "3.点击左上角的+号便可广播你的需求给特定群组"
+
+#: templates/mychat.html:158
+msgid "4. You can also choose a user to have private conversation."
+msgstr "4.你也可以选择进行私聊或者公聊"
+
+#: templates/mychat.html:159
+msgid "5. Good luck and enjoy your journey!"
+msgstr "5.祝好运, 玩的愉快"
+
+#: templates/mychat.html:183
+msgid "No message yet!"
+msgstr "暂无信息"
+
+#: templates/myprofile.html:20
+msgid "Profile"
+msgstr "个人资料"
+
+#: templates/myprofile.html:23
+msgid "Edit your profile here"
+msgstr "更新你的资料"
+
+#: templates/myprofile.html:34
+msgid "Change"
+msgstr "更新"
+
+#: templates/myprofile.html:50 templates/resetpw.html:18
+msgid "Confirm"
+msgstr "就这样"
+
+#: templates/myprofile.html:50
+msgid "Back"
+msgstr "返回"
+
+#: templates/officeloc.html:13
+msgid "Location"
+msgstr "地点"
+
+#: templates/officeloc.html:17
+msgid "Chengdu(China)"
+msgstr "中国成都"
+
+#: templates/officeloc.html:18
+msgid "1-5-25, Jieyi Road, Jiniu District"
+msgstr "金牛区解颐路1-5-25"
+
+#: templates/officeloc.html:18
+msgid "Chengdu, Sichuan 610000"
+msgstr "四川省成都市 610000"
+
+#: templates/officeloc.html:34
+msgid "Seattle(U.S)"
+msgstr "美国西雅图"
+
+#: templates/officeloc.html:35
+msgid "535 8th St South, Kirkland"
+msgstr "柯克兰 St South 8号 535室"
+
+#: templates/officeloc.html:35
+msgid "Seattle, WA 98033"
+msgstr "华盛顿州西雅图市 98033"
+
+#: templates/officeloc.html:51
+msgid "Tokyo(Japan)"
+msgstr "日本东京"
+
+#: templates/officeloc.html:52
+msgid "510, 3-27-10 Nukui, Nerima ward"
+msgstr "练马区贯井3-27-10,510号"
+
+#: templates/officeloc.html:52
+msgid "Tokyo, 176-0021"
+msgstr "东京, 176-0021"
+
+#: templates/quote.html:12
+msgid "Search"
+msgstr "搜一个"
+
+#: templates/quote.html:36
+msgid "Join Flight Chat and talk with people on your flight"
+msgstr "加入航班聊天室气氛high起来"
+
+#: templates/quote.html:53
+msgid "Boradcast a delivery request to people on this route."
+msgstr "广播这则消息给这条航线上的人。"
+
+#: templates/quote.html:64
+msgid "Broadcast"
+msgstr "播报"
+
+#: templates/register.html:10 templates/register.html:17
+msgid "Register"
+msgstr "注册"
+
+#: templates/thehelp.html:16
+msgid "Yo!Helper"
+msgstr "Yo!我来帮"
+
+#: templates/thehelp.html:19
+msgid "These are the people that need your help!"
+msgstr "这些人需要你的帮助!"
+
+#: templates/thehelp.html:22
+msgid "Same Flight"
+msgstr "同一航班"
+
+#: templates/thehelp.html:26 templates/thehelp.html:92
+msgid "Username"
+msgstr "用户名"
+
+#: templates/thehelp.html:29
+msgid "Flight"
+msgstr "航班号"
+
+#: templates/thehelp.html:53
+msgid "Click the button to join the chatroom or send an email."
+msgstr "点击按钮线上聊天或发送邮件."
+
+#: templates/thehelp.html:59
+msgid "Chat"
+msgstr "聊起来"
+
+#: templates/thehelp.html:72 templates/thehelp.html:129
+msgid "Email"
+msgstr "邮件"
+
+#: templates/thehelp.html:80 templates/thehelp.html:137
+msgid "NO ONE NEEDS HELP AT THE MOMENT"
+msgstr "暂无帮忙需求"
+
+#: templates/thehelp.html:88
+msgid "Other Help"
+msgstr "其余帮助"
+
+#: templates/welcome.html:28
+msgid "Building Trust and Connections among world travelloers"
+msgstr "共享航班 共创未来"
+
+#: templates/welcome.html:41
+msgid "Welcome"
+msgstr "欢迎"
+
+#: templates/welcome.html:54
+msgid "Find the people on the Flight."
+msgstr "找到他，聊起来."
+
+#: templates/welcome.html:63
+msgid "Need to send your package right away?"
+msgstr "需要马上寄送物品？"
+
+#: templates/welcome.html:64
+msgid "Worried about your overweight suitcase?"
+msgstr "担心行李箱超重？"
+
+#: templates/welcome.html:65
+msgid "Wanna have a seat by the window?"
+msgstr "想要靠窗的座位？"
+
+#: templates/welcome.html:66
+msgid "Travelling alone and wanna make new friends?"
+msgstr "一个人的旅行想认识新朋友？"
+
+#: templates/welcome.html:67
+msgid "Maybe a free ride from the airport to downtown?"
+msgstr "红眼航班或许能搭上一个同机人的顺风车？"
+
+#: templates/welcome.html:92
+msgid "Find and then chat with people on your flight."
+msgstr "找到同机人，提出你的需求。"
+
+#: templates/welcome.html:93
+msgid "People on your flight will help to rearrange your large suitcase etc."
+msgstr "让同一航班的人帮你重置你的行李箱。"
+
+#: templates/welcome.html:94
+msgid "Find a taker for your overseas purchasing and broadcast other requests."
+msgstr "海外代购当天送达。"
+
+#: templates/welcome.html:95
+msgid "Trust makes our world better."
+msgstr "信任, 让世界更美好."
+
+#: templates/welcome.html:104
+msgid "Enter"
+msgstr "猛戳"
+
+#: templates/welcome.html:112
+msgid "Copyright"
+msgstr "版权所有"
+
+#~ msgid "About Us"
+#~ msgstr "关于我们"
+
+#~ msgid "Here you just write some bullship introducing ourselves"
+#~ msgstr "这里随便写一些自我介绍吧"
+
+#~ msgid "Waseda University, Japan"
+#~ msgstr "日本早稻田大学"
+
+#~ msgid "University of Washington, U.S"
+#~ msgstr "美国华盛顿大学"
+
+#~ msgid "Office Location"
+#~ msgstr "地点"
+

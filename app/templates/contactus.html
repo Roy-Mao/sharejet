@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User Dashboard
+{% endblock title%}
+
+{% block styles %}
+    {{super()}}
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'contactus.css')}}">
+{% endblock %}
+
+{% block main %}
+	<div class="container">
+		 <h2 class="h_title">Contact us</h2>
+		 
+
+		 <div id="slideImg">
+		 	<div class="slideMain">
+		 		<ul class= "slide1">
+		 			<li><img class = "rimg" src="static/img/rimg/hxw.jpg" alt="hxw"/></li>
+		 			<li><img class = "rimg" src="static/img/rimg/bcs.jpg" alt="bcs"/></li>
+		 			<li><img class = "rimg" src="static/img/rimg/mpz.jpg" alt="mpz"/></li>
+		 			<li><img class = "rimg" src="static/img/rimg/mqs.jpg" alt="mqs"/></li>
+		 			<li><img class = "rimg" src="static/img/rimg/bhg.jpg" alt="bhg"/></li>
+		 			<li><img class = "rimg" src="static/img/rimg/hyy.jpg" alt="hyy"/></li>
+		 			<li><img class = "rimg" src="static/img/rimg/mhb.jpg" alt="mhb"/></li>
+		 			<li><img class = "rimg" src="static/img/rimg/brb.jpg" alt="brb"/></li>
+		 			<li><img class = "rimg" src="static/img/rimg/mrd.jpg" alt="mrd"/></li>
+		 		</ul>
+		 	</div>
+		 </div>
+
+
+		<section id="under_pic">
+			<div>
+				<section class="left_word">
+					<h2>{{_('Donation Support')}}</h2>
+					<h5>{{_('Please donate a small amount to keep us alive')}}</h5>
+					<p>{{_('We created this site with the hope that people can help each other during our life journey and make more friends in real life through technology. We collect the donation partly for the site maintainance and other than that, we will donate the money to assist children learning computer science in least developed countries. ')}}</p>
+					<h4>{{_('Join Us?')}}</h4>
+					<ul class="join_us">
+						<li>{{_('Database Designer')}}</li>
+						<li>{{_('Web Application Engineer')}}</li>
+						<li>{{_('Front-end Engineer(Javascript, bootstrap)')}}</li>
+						<li>{{_('Back-end server-side Engineer.(Python, php, Flask framework)')}}</li>
+						<li>{{_('C# and Java (ios/android enginner)')}}</li>
+						<li>{{_('Cooperationa and Sponsorship')}}</li>
+					</ul>
+				</section>
+				<form action = "{{ url_for('contactus') }}" method = "post" id = "right_form">
+					{% if success %}
+						<p>Thank you for your message. We'll get back to you shortly.</p>
+					{% else %}
+						{% for message in form.name.errors %}
+							<div class="flash">{{ message }}</div>
+						{% endfor %}
+						{% for message in form.email.errors %}
+						  <div class="flash">{{ message }}</div>
+						{% endfor %}
+						{% for message in form.subject.errors %}
+						  <div class="flash">{{ message }}</div>
+						{% endfor %}
+						{% for message in form.message.errors %}
+						  <div class="flash">{{ message }}</div>
+						{% endfor %}
+					    {{ form.hidden_tag() }}
+					    {{ form.name.label }}
+					    {{ form.name }}				 
+					    {{ form.email.label }}
+					    {{ form.email }}
+					    {{ form.subject.label }}
+					    {{ form.subject }}
+					    {{ form.message.label }}
+					    {{ form.message }}
+					    {{ form.submit }}
+					{% endif %}
+  				</form>
+			</div>
+		</section>
+		<div id="donai">
+			<div class="logo_div">
+				<img id="wechat_logo" src="https://i.imgur.com/cNvIuY8.png" title="wechat" /> 打赏<br>(5元/次)<img id="wechat_qr" src="https://i.imgur.com/WXYjqeI.jpg" title="wechat_qr" />
+			</div>
+			<div class="logo_div">
+				<img id="bitcoin_logo" src="https://i.imgur.com/05aBsjO.png" title=“bitcoin_logo” /><br>Bitcoin <img src="https://i.imgur.com/lGkf35V.jpg" id="bitcoin_qr" title=“bitcoin_qr” />
+			</div>
+		</div>
+	</div>
+{% endblock main %}
+
+{% block scripts %}
+	{{super()}}
+    <script src="{{ url_for('static', filename='jquery.rotate.js') }}"></script>
+{% endblock scripts %}

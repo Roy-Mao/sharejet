@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block title %}
+    Address
+{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'officeloc.css')}}">
+{% endblock %}
+
+{% block main %}
+<div class = "container">
+    <h2 class="h_title">{{_('Location')}}</h2>
+	<table>
+		<tr data-toggle="collapse" data-target="#city_cd" class="accordion-toggle my_tr aline">
+			<td>	
+				<h4>{{_('Chengdu(China)')}}</h4>
+				<p>{{_('1-5-25, Jieyi Road, Jiniu District')}}<br>{{_('Chengdu, Sichuan 610000')}}</p>
+				<p><span class="glyphicon glyphicon-phone"></span> (+86)138-8148-0956</p>
+			</td>
+			<td><img src="/static/img/city_cd.jpg"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="hiddenRow">
+				<div class="accordian-body collapse viewwrap" id="city_cd">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.1241447601287!2d104.08201831427802!3d30.68678298165314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x36efdaba4abb5525%3A0x9163fcafa8a6f920!2zVGFpamkgQmVpamluIO-8iE5vcnRod2VzdCBHYXRl77yJ!5e0!3m2!1sen!2sjp!4v1503301141183" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</td>
+		</tr>
+
+
+		<tr data-toggle="collapse" data-target="#city_st" class="accordion-toggle my_tr aline">
+			<td>	
+				<h4>{{_('Seattle(U.S)')}}</h4>
+				<p>{{_('535 8th St South, Kirkland')}}<br>{{_('Seattle, WA 98033')}}</p>
+				<p><span class="glyphicon glyphicon-phone"></span> (+81)070-2084-1393</p>
+			</td>
+			<td><img src="/static/img/city_sa.jpg"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="hiddenRow">
+				<div class="accordian-body collapse viewwrap" id="city_st">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2686.703149778021!2d-122.1936168511276!3d47.67076291239668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549012c5291838b3%3A0x7efc970bfd7b69c2!2s535+8th+St+S%2C+Kirkland%2C+WA+98033%2C+USA!5e0!3m2!1sen!2sjp!4v1503301348431" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</td>
+		</tr>
+
+
+		<tr data-toggle="collapse" data-target="#city_tk" class="accordion-toggle my_tr aline">
+			<td>	
+				<h4>{{_('Tokyo(Japan)')}}</h4>
+				<p>{{_('510, 3-27-10 Nukui, Nerima ward')}}<br>{{_('Tokyo, 176-0021')}}</p>
+				<p><span class="glyphicon glyphicon-phone"></span> (+81)070-2084-1393</p>
+			</td>
+			<td><img src="/static/img/city_tk.jpg"></td>
+		</tr>
+		<tr>
+			<td colspan="2" class="hiddenRow">
+				<div class="accordian-body collapse viewwrap" id="city_tk">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.542002429238!2d139.62391281445588!3d35.737480780181194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018edcba016505d%3A0x3a294129499c4a55!2s3+Chome-27-10+Nukui%2C+Nerima-ku%2C+T%C5%8Dky%C5%8D-to+176-0021!5e0!3m2!1sen!2sjp!4v1503301427431" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+			</td>
+		</tr>
+
+	</table>
+</div>
+{% endblock main %}

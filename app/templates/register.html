@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h2 class="h_title">{{_('Register')}}</h2>
+
+        <form action="{{ url_for('register') }}" method="post" id="register_form">
+        {{wtf.quick_form(form)}}
+        </form>
+        <div class="form-group">
+            <!--<div class="col-sm-offset-2 col-sm-10">-->
+            <button class="btn btn-primary btn-md" type="submit" form="register_form">{{_('Register')}}</button>
+            <!--</div>-->
+        </div>
+
+    </div>
+{% endblock %}
+

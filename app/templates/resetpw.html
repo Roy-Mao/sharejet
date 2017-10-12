@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+    Resetpassword
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h2>{{_('Reset Password')}}</h2>
+
+        <form action="{{ url_for('resetpw') }}" method="post" id="resetpw_form">
+        {{wtf.quick_form(form)}}
+        </form>
+        
+        <div class="form-group">
+            <!--<div class="col-sm-offset-2 col-sm-10">-->
+            <button class="btn btn-primary" type="submit" form="resetpw_form">{{_('Confirm')}}</button>
+            <!--</div>-->
+        </div>
+    </div>
+{% endblock %}

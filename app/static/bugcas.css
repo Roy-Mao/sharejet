@@ -1,0 +1,18 @@
+.popover-title
+{
+	background-color: black;
+}
+
+.ajax_a,
+.ajax_b
+{
+	color: white;
+	border-bottom: dashed 1px white;
+}
+
+.editale-click,
+a.editable-click,
+a.editable-click:hover
+{
+	border-bottom: dashed 1px white;
+}

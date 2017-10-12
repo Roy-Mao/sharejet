@@ -1,0 +1,151 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    You can help
+{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class = "container">
+    <h2 class="h_title">{{_('Yo!Helper')}}</h2>
+    <div id ="info_pp"><a href = "{{url_for('myprofile')}}" data-toggle="tooltip" data-placement="right" title="Go Edit"><img id="info_pp_img" alt = "info page profile picture"/></a></div>
+    <div id="info_hiddenid">{{userid}}</div>
+    <p> (^_^) {{_('These are the people that need your help!')}}' </p>
+    <div class="table-responsive" id="first_table">
+        <table class = "table table-hover table-condensed" style="border-collapse:collapse;">
+            <caption class="sc_caption">{{_('Same Flight')}}</caption>
+            <thead>
+                <tr class = "sc_column">
+                    <th>#</th>
+                    <th>{{_('Username')}}</th>
+                    <th>{{_('From')}}</th>
+                    <th>{{_('To')}}</th>
+                    <th>{{_('Flight')}}</th>
+                    <th>{{_('Departure Date')}}</th>
+                    <th>{{_('Pay')}}</th>
+                    <th>{{_('Contact')}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if match_oreq %}      
+                    {% for each_oreq in match_oreq  %}
+                    <tr data-toggle="collapse" data-target="#hedemo_{{ loop.index }}" class="accordion-toggle my_tr">
+                        <td>{{loop.index}}</td>
+                        <td>{{each_oreq['username']}}</td>
+                        <td>{{each_oreq['leaving_city']}}</td>
+                        <td>{{each_oreq['arriving_city']}}</td>
+                        <td>{{each_oreq['flightnumber']}}</td>
+                        <td>{{each_oreq['event_date']}}</td>
+                        <td>{{each_oreq['moneyamount']|safe}}</td>
+                        <td>{{each_oreq['email']}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="8" class="hiddenRow">
+                            <div class="accordian-body collapse" id="hedemo_{{ loop.index }}"> 
+                                <div class="col-xs-7 col-md-7 my_wrap">{{ each_oreq['requesttext'] }}</div>
+                                <div class="col-xs-5 col-md-5 my_wrap">
+	                                	<p> {{_('Click the button to join the chatroom or send an email.')}}</p>
+                                    <form method = "post" action="{{ url_for('mychat') }}" class = "inline_form">
+                                        <input type="hidden" name="flightnumber" value= "{{each_oreq['flightnumber']}}" />
+                                        <input type="hidden" name="leaving_city" value= "{{each_oreq['leaving_city']}}" />
+                                        <input type="hidden" name="arriving_city" value= "{{each_oreq['arriving_city']}}" />
+                                        <input type="hidden" name="startdate" value= "{{each_oreq['event_date']}}" />
+                                        <button type="submit" class="btn btn-info btn-sm bttmargin" data-toggle="tooltip" data-placement="top" title="{{each_oreq['flightnumber']}}"><span class="glyphicon glyphicon-send"></span> {{_('Chat')}}</button>
+                                    </form>
+                                    <form action="{{ url_for('thehelp') }}" method="post" class = "inline_form">
+                                        <input type = "hidden" name = "helpeename" value = "{{each_oreq['username']}}">
+                                        <input type = "hidden" name = "leaving_city" value = "{{each_oreq['leaving_city']}}">
+                                        <input type = "hidden" name = "arriving_city" value = "{{each_oreq['arriving_city']}}">
+                                        <input type = "hidden" name = "from_port" value = "{{from_port}}">
+                                        <input type = "hidden" name = "to_port" value = "{{to_port}}">
+                                        <input type = "hidden" name = "event_date" value = "{{each_oreq['event_date']}}">
+                                        <input type = "hidden" name = "helpee_email" value = "{{each_oreq['email']}}">
+                                        <input type = "hidden" name = "flightnumber" value = "{{fn}}">
+                                        <input type = "hidden" name = "requesttext" value = "{{each_oreq['requesttext']}}">
+                                        <input type = "hidden" name = "moneyamount" value = "{{each_oreq['moneyamount']}}">
+                                        <button type="button" class="btn btn-info btn-sm bttmargin" onclick="sendtemail(this)"><span class="glyphicon glyphicon-envelope"> {{_('Email')}}</span></button>
+                                    </form>
+                                </div> 
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr class = "no_message"><td colspan = "8">{{_('NO ONE NEEDS HELP AT THE MOMENT')}}</td></tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-responsive" id="second_table">
+        <table class = "table table-hover table-condensed" style="border-collapse:collapse;">
+            <caption class="sc_caption">{{_('Other Help')}}</caption>
+            <thead>
+                <tr class = "sc_column">
+                    <th>#</th>
+                    <th>{{_('Username')}}</th>
+                    <th>{{_('From')}}</th>
+                    <th>{{_('To')}}</th>
+                    <th>{{_('Departure Date')}}</th>
+                    <th>{{_('Pay')}}</th>
+                    <th>{{_('Contact')}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if match_mreq %}      
+                    {% for each_mreq in match_mreq  %}
+                    <tr data-toggle="collapse" data-target="#hetdemo_{{ loop.index }}" id = "hidnum_{{ loop.index }}" class="accordion-toggle my_tr">
+                        <td>{{loop.index}}</td>
+                        <td>{{each_mreq['username']}}</td>
+                        <td>{{each_mreq['leaving_city']}}</td>
+                        <td>{{each_mreq['arriving_city']}}</td>
+                        <td>{{each_mreq['event_date']}}</td>
+                        <td>{{each_mreq['moneyamount']|safe}}</td>
+                        <td>{{each_mreq['email']}}</td>
+                    </tr>
+                    <tr>
+                        <td colspan = '7' class="hiddenRow">
+                            <div class="accordian-body collapse" id="hetdemo_{{ loop.index }}"> 
+                                <div class="col-xs-9 col-md-9 my_wrap">{{ each_mreq['requesttext'] }}</div>
+                                <div class="col-xs-3 col-md-3 my_wrap">
+                                    <!--NOTICE: the form below will be posted to thehelp route, but it will not contain the helper name and helper email information. These two info will be retrieved inthe back end by querying the database User table-->
+                                	<form action="{{ url_for('thehelp') }}" method="post">
+	                                	<input type = "hidden" name = "helpeename" value = "{{each_mreq['username']}}">
+	                                	<input type = "hidden" name = "leaving_city" value = "{{each_mreq['leaving_city']}}">
+	                                	<input type = "hidden" name = "arriving_city" value = "{{each_mreq['arriving_city']}}">
+	                                	<input type = "hidden" name = "from_port" value = "{{from_port}}">
+	                                	<input type = "hidden" name = "to_port" value = "{{to_port}}">
+	                                	<input type = "hidden" name = "event_date" value = "{{each_mreq['event_date']}}">
+	                                	<input type = "hidden" name = "helpee_email" value = "{{each_mreq['email']}}">
+	                                	<input type = "hidden" name = "flightnumber" value = "{{fn}}">
+	                                	<input type = "hidden" name = "requesttext" value = "{{each_mreq['requesttext']}}">
+	                                	<input type = "hidden" name = "moneyamount" value = "{{each_mreq['moneyamount']}}">
+	                                	<button type="button" class="btn btn-info btn-sm bttmargin" onclick="sendtemail(this)"><span class="glyphicon glyphicon-envelope"> {{_('Email')}}</button>
+                                	</form>
+                                </div> 
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr class = "no_message"><td colspan = "7">{{_('NO ONE NEEDS HELP AT THE MOMENT')}}</td></tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock main%}
+
+{% block scripts %}
+    {{super()}}
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="{{ url_for('static', filename='info.js') }}"></script>
+{% endblock scripts %}
+

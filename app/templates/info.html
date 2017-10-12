@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User Dashboard
+{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bugcas.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div class = "container">
+    <h2 class="h_title">{{_('Dashboard')}}</h2>
+    <div id ="info_pp"><a href = "{{url_for('myprofile')}}" data-toggle="tooltip" data-placement="right" title="Go Edit"><img id="info_pp_img" alt = "info page profile picture"/></a></div>
+    <div id="info_hiddenid">{{userid}}</div>
+    <p>{{_('Here to checkout all your flight schedules and requests.')}}</p>
+    <div class="table-responsive" id="first_table">
+        <table class = "table table-hover">
+            <caption class="sc_caption">{{_('Schedules')}}</caption>
+            <thead>
+                <tr class = "sc_column">
+                    <th>#</th>
+                    <th>{{_('Flight Number')}}</th>
+                    <th>{{_('From')}}</th>
+                    <th>{{_('To')}}</th>
+                    <th>{{_('Departure Date')}}</th>
+                    <th>{{_('Join/Delete')}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if user_sche_list %}             
+                    {% for each_dict in user_sche_list  %}
+                    <form method = "post" action="{{ url_for('mychat') }}">
+                        <tr>
+                            <td>{{loop.index}}</td>
+                            <td>{{each_dict['flightnumber']}}</td>
+                            <td>{{each_dict['origination']}}</td>
+                            <td>{{each_dict['destination']}}</td>
+                            <td>{{each_dict['startdate']}}</td>
+                            <input type="hidden" name="flightnumber" value= "{{each_dict['flightnumber']}}" />
+                            <input type="hidden" name="leaving_city" value= "{{each_dict['leaving_city']}}" />
+                            <input type="hidden" name="arriving_city" value= "{{each_dict['arriving_city']}}" />
+                            <input type="hidden" name="startdate" value= "{{each_dict['startdate']}}" />
+                            <td><button type="submit" class="btn btn-primary btn-sm join_confirm" data-toggle="tooltip" data-placement="bottom" title="Flight {{each_dict['flightnumber']}}"><span class="glyphicon glyphicon-log-in"></span> {{_('Join')}}</button> <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this, info_id = {{each_dict.id | tojson}}, oot = 'o')"><span class="glyphicon glyphicon-trash"></span> {{_('Del')}}</button>
+                            </td>
+                        </tr>
+                    </form>
+                    {% endfor %}
+                {% else %}
+                    <tr class = "no_message"><td colspan = "5">{{_('NO REQUEST YET')}}</td><td colspan = "1"><a href="{{url_for('quote')}}"><button id="nrbutton" class="btn btn-secondary btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add schedule"><span class="glyphicon glyphicon-plus"></span></button></a></td></tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-responsive" id="second_table">
+        <table class = "table table-hover table-condensed" style="border-collapse:collapse;">
+            <caption class="sc_caption">{{_('Requests')}}</caption>
+            <thead>
+                <tr class = "sc_column">
+                    <th>#</th>
+                    <th>{{_('From')}}</th>
+                    <th>{{_('To')}}</th>
+                    <th>{{_('Departure Date')}}</th>
+                    <th>{{_('Pay')}}</th>
+                    <th>{{_('Delete')}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if user_reque_list %}      
+                    {% for each_dict in user_reque_list  %}
+                    <tr data-toggle="collapse" data-target="#demo_{{ loop.index }}" class="accordion-toggle my_tr">
+                        <td>{{loop.index}}</td>
+                        <td>{{each_dict['leaving_city']}}</td>
+                        <td>{{each_dict['arriving_city']}}</td>
+                        <td>{{each_dict['event_date']}}</td>
+                        <td><a class = "ajax_b" href="#" data-type="select" data-name="moneyamount" data-title = "Edit Reward" data-pk="{{each_dict['id']}}" data-url = "{{url_for('flyreq')}}">{{each_dict['moneyamount']|safe}}</a></td>
+                        <td><button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this, info_id = {{each_dict.id | tojson}}, oot = 't')"><span class="glyphicon glyphicon-trash"></span> {{_('Del')}}</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="hiddenRow">
+                            <div class="accordian-body collapse" id="demo_{{ loop.index }}"> 
+                                <div class="col-xs-7 col-md-7 my_wrap"><a class = "ajax_a" href="#" data-type="textarea" data-name="requesttext" data-title = "Edit Text" data-pk="{{each_dict['id']}}" data-url = "{{url_for('flyreq')}}">{{ each_dict['requesttext'] }}</a></div>
+                                <div class="col-xs-5 col-md-5 my_wrap">
+                                    {% if  broadcast_to[loop.index0]  %}
+                                        <p> {{_('Your request has been broadcast the following flights:')}}</p>
+                                            {% for each in  broadcast_to[loop.index0]  %}
+                                            <form method = "post" action="{{ url_for('mychat') }}" class = "inline_form">
+                                                <input type="hidden" name="flightnumber" value= "{{each}}" />
+                                                <input type="hidden" name="leaving_city" value= "{{each_dict['leaving_city']}}" />
+                                                <input type="hidden" name="arriving_city" value= "{{each_dict['arriving_city']}}" />
+                                                <input type="hidden" name="startdate" value= "{{each_dict['event_date']}}" />
+                                                <input type="submit" class="btn btn-primary btn-sm btmargin" value = "{{each}}" data-toggle="tooltip" data-placement="top" title="join chat">
+                                            </form>
+                                            {% endfor %}
+                                    {% else %}
+                                        <p> {{_('No flights available at the moment')}}</p>
+                                    {% endif %}
+                                </div> 
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr class = "no_message"><td colspan = "5">{{_('NO REQUEST YET')}}</td><td colspan = "1"><a href="{{url_for('quote')}}"><button id="nrbutton" class="btn btn-primary btn-sm" data-toggle="tooltip" data-placement="bottom" title="Add reqeust"><span class="glyphicon glyphicon-plus"></span></button></a></td></tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.1/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+    <script src="{{ url_for('static', filename='info.js') }}"></script>
+{% endblock scripts %}

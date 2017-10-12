@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block title %}
+    About Us
+{% endblock %}
+
+{% block styles %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static', filename = 'aboutus.css')}}">
+{% endblock %}
+
+{% block main %}
+<div class = "container">
+	<h2 class="h_title">{{_('About Us')}}</h2>
+	<div class = "transitiondiv">
+		<section class = "about_intro">
+		</section>
+	</div>
+</div>
+<div id="pcontent">
+	<section class="speaker">
+		<div class="col-2-3">
+			<h2> Roy Mao </h2>
+			<h5> {{_('Waseda University, Japan')}}</h5>
+			<p>  {{_('Chengdu, China')}} </p>
+			<h5> {{_('Programmer')}} </h5>
+			<p>{{_('Hey! I from Chengdu, China and a graduate student from Waseda University, Japan. I learn fast and am enthusiastic about web technology. I am generally interested in both human (Chinese, Japanese and English) and computer languages(python, Javascript, C). I believe technology makes our life better and easier. I like the concept of open source, knowledge-sharing and team cooperation and so this site is created as part of my class project. Hope you enjoy it and give us your precious feedback so that we can keep improving this site and making it better.^.^.')}}</p>
+		</div>
+		<aside class="col-1-3">
+			<div class="speaker-info">
+				<img src="static/img/royprofile1.jpg" alt="Roymao">
+				<ul>
+					<li><a href="https://www.facebook.com/ruoyu.mao">Facebook:Roy</a></li>
+					<li>Wechat:amaoruoyu</li>
+					<li>Tel: (+81)070-2084-1393</li>
+					<li>Email:ruoyu.mao@icloud.com</li>
+				</ul>
+			</div>
+		</aside>
+	</section>
+
+	<section class="speaker">
+		<div class="col-2-3">
+			<h2> Ryan Brill </h2>
+			<h5> {{_('University of Washington, U.S')}}</h5>
+			<p> {{_('Seattle, U.S')}} </p>
+			<h5> {{_('Public Relations')}} </h5>
+			<p>{{_('Ryan is a native of Kirkland, WA and currently resides in Seattle, WA. In 2011 he earned his Bachelor degree in Philosophy and Religious Studies at Central Washington University before moving back to Seattle to work on a series of start-up projects. In 2015, Ryan entered graduate school at the University of Washington where he earned his MA in Japan Studies from the Jackson School of International Studies in 2017, after which he worked at MSL Tokyo Office as an intern and spent time with me together creating this site.')}}</p>
+		</div>
+		<aside class="col-1-3">
+			<div class="speaker-info">
+				<img src="static/img/ryanprofile.jpg" alt="Roymao">
+				<ul>
+					<li><a href="https://www.facebook.com/dagwood5">Facebook:Ryan Brill</a></li>
+					<li>Messenger:rdbrill</li>
+					<li>Tel: (+1)425-263-7693</li>
+					<li>Email:rdbrill@gmail.com</li>
+				</ul>
+			</div>
+		</aside>
+	</section>
+</div>
+
+{% endblock main %}

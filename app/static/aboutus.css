@@ -1,0 +1,132 @@
+@media screen and (max-width: 753px)
+{
+	.speaker
+	{
+		text-align: center;
+	}
+	.col-2-3
+	{
+		width: 100% !important;
+		margin-left: 0 !important;
+		/*text-align: center;*/ 
+	}
+	.col-1-3
+	{
+		/*width: 100% !important;*/
+		margin: auto !important;
+	}
+	.speaker-info
+	{
+		padding-bottom: 5px !important;
+	}
+
+}
+
+
+
+.transitiondiv
+{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.about_intro
+{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 20px;
+}
+
+#pcontent
+{
+	margin-left: 15px;
+	margin-right: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+}
+
+
+.col-2-3 h2
+{
+	font-size:23px;
+  	line-height:44px;
+   	color:#716F6F;
+   	/*color: #888;*/
+} 
+.col-2-3 p
+{
+	margin-bottom:22px;
+	color:#888;
+}
+
+h5{
+	margin-bottom:22px;
+	color:#a9b2b9;
+    font-size:14px;
+	font-weight:400;
+	text-transform:uppercase;
+}
+
+.col-1-3
+{
+  min-width: 240px;
+  margin-left: 1%;
+}
+
+ .col-2-3
+{
+  width:60%;
+  margin-left: 30px;
+  /*min-width: 250px;*/
+}
+
+.col-1-3,
+.col-2-3
+{
+	padding-left:15px;
+	padding-right:15px;
+	display:inline-block;
+	vertical-align:top;
+}
+
+  /*===================speaker-info=============================*/
+.speaker
+{
+	margin-bottom:44px;
+}
+
+.speaker a
+{
+	text-decoration:none;
+	color:#648880;
+}
+
+.speaker-info
+{
+	border:1px solid #dfe2e5;
+	border-radius:5px;
+	margin-top:88px;
+	padding-bottom:22px;
+	text-align:center;
+}
+.speaker-info img
+{
+	border-radius:30%;
+	height:130px;
+	margin:-66px 0 12px 0;
+	vertical-align:top;
+}
+.speaker-info ul
+{
+	list-style:none;
+	padding-left:0;
+	text-align:center;
+	list-style-position:inside;
+	/*width:264px;*/
+	width: 95%;
+}
+.speaker-info li
+{
+	text-align:center;	
+}

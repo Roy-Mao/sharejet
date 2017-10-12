@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% from "_formhelpers.html" import render_field %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+
+{% block main %}
+    <div class="container">
+        <div class = "container-fluid">
+            <h2 class="h_title">{{_('Search')}}</h2>
+            <form action="{{ url_for('quote') }}" method="POST">
+                {{ form.hidden_tag() }}
+                <div class="form-group dform">
+                        {{ render_field(form.startdate, class='form-control datepicker', placeholder = 'month/day/year (Choose airport local time)') }}
+                </div>
+
+
+                <div class="form-group col-sm-6" id="left_form">
+                    <div class="form-group scrollable-dropdown-menu">
+                        {{ render_field(form.origination, class='form-control q', placeholder = 'Airport-City Name') }} 
+                    </div>
+                </div>
+                <div class="form-group col-sm-6" id="right_form">
+                    <div class="form-group scrollable-dropdown-menu">
+                        {{ render_field(form.destination, class='form-control q', placeholder = 'Airport-City Name') }} 
+                    </div>
+                </div>
+               <div class="dcform"></div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    {{_('Join Flight Chat and talk with people on your flight')}}
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="dform">
+                                    {{ render_field(form.flightnumber, class ='form-control', placeholder = '3U8833') }}
+                                </div>
+                                <button class = "btn btn-primary btn-md" type = "submit"><span class="glyphicon glyphicon-log-in"></span> {{_('Join')}}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    {{_('Boradcast a delivery request to people on this route.')}}
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <div class="dform">
+                                    {{ render_field(form.requesttext, class ='form-control', placeholder = 'eg:Delivery/packaging/Seat-exchange/tourguid/free-ride')}}
+                                    {{ render_field(form.moneyamount, class ='form-control')}}
+                                    {{ render_field(form.contact, class ='form-control', placeholder = 'Email Address')}}
+                                </div>
+                                <button class = "btn btn-primary btn-md" type = "submit"><span class="glyphicon glyphicon-bullhorn"></span> {{_('Broadcast')}}</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    {{super()}}
+    <script src="https://cdn.rawgit.com/corejavascript/typeahead.js/master/dist/typeahead.jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.0/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="{{ url_for('static', filename='quote.js') }}"></script>
+{% endblock scripts %}

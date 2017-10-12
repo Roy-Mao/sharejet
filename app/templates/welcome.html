@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>ShareJet</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="static/welcome.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <!--<div class="masthead clearfix">-->
+          <div class="masthead">
+            <div class="inner">
+              <!--<h3 class="masthead-brand">Building Trust and Connections among world travelloers.</h3>-->
+              <p class="sloganp">{{_('Building Trust and Connections among world travelloers')}}</p>
+              <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>                        
+                    </button>
+                    <!--<a class="navbar-brand" href="#">WebSiteName</a>-->
+                  </div>
+                  <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                      <li><a href="{{url_for('welcome')}}">{{_('Welcome')}}</a></li>
+                      <li><a href="{{ url_for('aboutus') }}">{{_('About')}}</a></li>
+                      <li><a href="{{ url_for('contactus') }}">{{_('Contact')}}</a></li>
+                      <li><a href="{{ url_for('officeloc') }}">{{_('Locations')}}</a></li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+          </div>
+
+          <div class="inner cover">
+            <img src="static/img/myicon.png" alt="myicon_logo" id="pandalogo">
+            <h1><font color="#FF2800">S</font><font color="#FF5000">H</font><font color="#FF7800">A</font><font color="#FFA000">R</font><font color="#FFC800">E</font><font color="#FFF000">J</font><font color="#D7FF00">E</font><font color="#AFFF00">T</font></h1>
+            <p class="lead">{{_('Find the people on the Flight.')}}</p>
+
+
+            <div class = "container">
+
+              <div class="row">
+
+                <div class= "col-md-4 div-row">
+                    <ul class="welcome_list">
+                        <li>{{_('Need to send your package right away?')}}</li>
+                        <li>{{_('Worried about your overweight suitcase?')}}</li>
+                        <li>{{_('Wanna have a seat by the window?')}}</li>
+                        <li>{{_('Travelling alone and wanna make new friends?')}}</li>
+                        <li>{{_('Maybe a free ride from the airport to downtown?')}}</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 div-row">
+                  <div class="row">
+                    <a id = 'lan_cn' href = "#">
+                      <img src="static/img/cnflag.png" alt="cnflag_photo" class="welcomeme">
+                    </a>
+                    <a id = "lan_us" href = "#">
+                      <img src="static/img/usflag.png" alt="usflag_photo" class="welcomeme">
+                    </a>
+                  </div>
+                  <div class="row">
+                    <a id = "lan_jp" href = "#">
+                      <img src="static/img/jpflag.png" alt="jpflag_photo" class="welcomeme">
+                    </a>
+                    <!--<a href = "#" id = "lan_gm">
+                      <img src="static/img/gmflag.png" alt="gmflag_photo" class="welcomeme">
+                    </a>-->
+                  </div>
+                </div>
+
+                <div class="col-md-4 last-col-div">
+                  <div class = "glass_div">
+                    <p>{{_('Find and chat with people on your flight.')}}</p>
+                    <p>{{_('People on your flight will help to rearrange your large suitcase etc.')}}</p>
+                    <p>{{_('Find a taker for your overseas purchasing and broadcast other requests.')}}</p>
+                    <p>{{_('Trust makes our world better.')}}</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <p class="lead">
+              <a href="{{url_for('login')}}" class="btn btn-lg btn-secondary">{{_('Enter')}}</a>
+            </p>
+
+
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>{{_('Copyright')}} &#9400;<a href="#">ShareJet</a> 2017, by <a href="https://www.facebook.com/ruoyu.mao">@Roymao</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="static/ie10-viewport-bug-workaround.js"></script>
+    <script src="{{ url_for('static', filename='lanset.js') }}"></script>
+  </body>
+</html>

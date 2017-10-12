@@ -1,0 +1,143 @@
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="en"{% endblock %}
+
+
+{% block head %}
+    <title>SHAREJET: {% block title %}{% endblock %}</title>
+
+    {% block metas %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+
+    {% block styles %}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="{{bootstrap_find_resource('css/bootstrap.css', cdn='bootstrap')}}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.0/css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/css/bootstrap-tour.min.css">
+    <link href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet">
+    {% endblock %}
+
+    <style type="text/css" media="screen">
+        #jqt.fullscreen #home .info {
+            display: none;
+        }
+        div#jqt #about {
+            padding: 100px 10px 40px;
+            text-shadow: rgba(0, 0, 0, 0.3) 0px -1px 0;
+            color: #999;
+            font-size: 13px;
+            text-align: center;
+            background: #161618;
+        }
+        div#jqt #about p {
+            margin-bottom: 8px;
+        }
+        div#jqt #about a {
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    </style>
+
+{% endblock %}
+
+
+{% block navbar %}
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url_for('welcome') }}"><img src="static/img/myicon.png" alt="pandajet_logo" id="pandalogo"> <font color="#FF2800">S</font><font color="#FF5000">H</font><font color="#FF7800">A</font><font color="#FFA000">R</font><font color="#FFC800">E</font><font color="#FFF000">J</font><font color="#D7FF00">E</font><font color="#AFFF00">T</font></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    {% if session.user_id %}
+                        <ul class="nav navbar-nav">
+                            <li id="guide3"><a href="{{url_for('index')}}"><span class="glyphicon glyphicon-th-list"></span> <span id="from_user">{{current_user.username}}</span> {{_('Dashboard')}}</a></li>
+                            <li id = "guide1"><a href="{{ url_for('quote') }}"><span class="glyphicon glyphicon-plane"></span> {{_('Flight Chat')}}</a></li>
+                            <li id="guide6"><a href="{{ url_for('thehelp') }}"><span class="glyphicon glyphicon-heart"></span> {{_('Offer Help')}}</a></li>
+                            <li id = "guide10"><a onclick="starttour()"><span class="glyphicon glyphicon-question-sign"></span> {{_('User Guide')}}</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-cog"></span> {{_('Settings')}}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url_for('propic') }}"><span class="glyphicon glyphicon-pencil"></span> {{_('Edit Profile')}} </a></li>
+                                    <li><a href="{{ url_for('resetpw') }}"><span class="glyphicon glyphicon-lock"></span> {{_('Reset Password')}} </a></li>
+                                    <li><a href="{{ url_for('logout') }}"><span class="glyphicon glyphicon-log-out"></span> {{_('Log Out')}}</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-leaf"></span> {{_('Languages')}}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" id = "lan_us"><img src="static/img/usflag.png" alt="cnflag_photo" class="nav_flag"> {{_('English')}} </a></li>
+                                    <li><a href="#" id="lan_cn"><img src="static/img/cnflag.png" alt="usflag_photo" class="nav_flag"> {{_('Chinese')}} </a></li>
+                                    <li><a href="#" id="lan_jp"><img src="static/img/jpflag.png" alt="jpflag_photo" class="nav_flag">{{_('Japanese')}}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    {% else %}
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> {{_('Sign Up')}}</a></li>
+                            <li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> {{_('Log In')}}</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-leaf"></span> {{_('Languages')}}<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" id = "lan_us"><img src="static/img/usflag.png" alt="cnflag_photo" class="nav_flag"> {{_('English')}} </a></li>
+                                    <li><a href="#" id="lan_cn"><img src="static/img/cnflag.png" alt="usflag_photo" class="nav_flag"> {{_('Chinese')}} </a></li>
+                                    <li><a href="#" id="lan_jp"><img src="static/img/jpflag.png" alt="jpflag_photo" class="nav_flag">{{_('Japanese')}}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <main>
+        <div class="container">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    {% for message in messages %}
+                    <h5 class="flashed">{{ message }}</h5>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        </div>
+        {% block main %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <div class = "container">
+        <hr>
+            <nav class="nav">
+            <ul>
+                <li><a class = "ftcolor" href="{{url_for('aboutus')}}"><span class="glyphicon glyphicon-info-sign ftcolor"></span> {{_('About')}} </a></li>
+                <li><a class = "ftcolor" href="{{url_for('officeloc')}}"><span class="glyphicon glyphicon-globe ftcolor"></span>  {{_('Locations')}} </a></li>
+                <li><a class = "ftcolor" href="{{url_for('contactus')}}"><span class="glyphicon glyphicon-envelope ftcolor"></span> {{_('Contact')}} </a></li>
+                <!--<li><a class = "ftcolor" href="#"><span class="glyphicon glyphicon-briefcase ftcolor"></span> Disclaimer</a></li>-->
+            </ul>
+            </nav>
+            <small> &#169;<a href="#">{{_('ShareJet')}}</a> 2017, by <a href="https://www.facebook.com/ruoyu.mao">@Roymao</small>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block scripts %}
+    {{ JSGlue.include() }}
+    <script src="{{bootstrap_find_resource('jquery.js', cdn='jquery')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="{{bootstrap_find_resource('js/bootstrap.js', cdn='bootstrap')}}"></script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tour/0.11.0/js/bootstrap-tour.min.js"></script>
+    <script src="{{ url_for('static', filename='userguid.js') }}"></script>
+    <script src="{{ url_for('static', filename='lanset.js') }}"></script>
+{% endblock scripts %}

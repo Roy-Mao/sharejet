@@ -3,11 +3,13 @@
 #TextField HAS BEEN DEPRECATED IN WTForms SO StringField SHOULD BE USED INSTEAD
 from flask import request
 from flask_wtf import FlaskForm
+from flask_login import current_user
 from passlib.apps import custom_app_context as pwd_context
 from wtforms.validators import InputRequired, Email, Length, EqualTo, ValidationError, Regexp
 from wtforms import StringField, PasswordField, BooleanField, SelectField, TextAreaField, SubmitField
 from .models import History, User, Schedule, Flyreq, Airport
-
+from email_validator import validate_email, EmailNotValidError
+import re
 
 
 class LoginForm(FlaskForm):

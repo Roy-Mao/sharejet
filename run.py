@@ -1,2 +1,3 @@
-from app import app, socketio
-socketio.run(app)
+from myapp import app, socketio
+if __name__ == "__main__":
+	socketio.run(app)

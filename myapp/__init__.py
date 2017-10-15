@@ -18,6 +18,7 @@ import os
 
 app = Flask(__name__)
 app.config.from_object(configmodule.Config)
+app.config['DEBUG'] = False
 
 db = SQLAlchemy(app)
 babel = Babel(app)
@@ -39,4 +40,4 @@ Session(app)
 Bootstrap(app)
 configure_uploads(app, photos)
 
-from app import views, models
+from myapp import views, models

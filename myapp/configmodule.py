@@ -19,4 +19,4 @@ class Config(object):
 	UPLOADED_PHOTOS_DEST = 'static/img'
 	TESTING = False
 	SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
-	DEBUG = os.environ['DEBUG_MOD']
+	#DEBUG = os.environ['DEBUG_MOD']

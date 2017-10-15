@@ -1,18 +1,17 @@
-# Chinese (Simplified, China) translations for PROJECT.
+# Translations template for PROJECT.
 # Copyright (C) 2017 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2017-10-13 15:28+0900\n"
-"PO-Revision-Date: 2017-09-15 00:33+0900\n"
-"Last-Translator: \n"
-"Language: zh_Hans_CN\n"
-"Language-Team: zh_Hans_CN <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -20,19 +19,19 @@ msgstr ""
 
 #: myapp/templates/aboutus.html:13
 msgid "About Us"
-msgstr "关于我们"
+msgstr ""
 
 #: myapp/templates/aboutus.html:23
 msgid "Waseda University, Japan"
-msgstr "早稻田大学"
+msgstr ""
 
 #: myapp/templates/aboutus.html:24
 msgid "Chengdu, China"
-msgstr "中国成都"
+msgstr ""
 
 #: myapp/templates/aboutus.html:25
 msgid "Programmer"
-msgstr "码农"
+msgstr ""
 
 #: myapp/templates/aboutus.html:26
 msgid ""
@@ -44,19 +43,19 @@ msgid ""
 "sharing and team cooperation and so this site is created as part of my "
 "class project. Hope you enjoy it and give us your precious feedback so "
 "that we can keep improving this site and making it better.^.^."
-msgstr "早大成都人, 成都早大人。喜爱开源项目，机器学习。健身和代码就是生活！期待您的反馈和联络。"
+msgstr ""
 
 #: myapp/templates/aboutus.html:44
 msgid "University of Washington, U.S"
-msgstr "华盛顿大学"
+msgstr ""
 
 #: myapp/templates/aboutus.html:45
 msgid "Seattle, U.S"
-msgstr "美国西雅图"
+msgstr ""
 
 #: myapp/templates/aboutus.html:46
 msgid "Public Relations"
-msgstr "公共关系"
+msgstr ""
 
 #: myapp/templates/aboutus.html:47
 msgid ""
@@ -68,15 +67,15 @@ msgid ""
 " the Jackson School of International Studies in 2017, after which he "
 "worked at MSL Tokyo Office as an intern and spent time with me together "
 "creating this site."
-msgstr "Ryan是华盛顿州柯克兰的土著居民，现居西雅图。在接手一系列创业项目之前在中央华盛顿大学学习。他于2015年进入华盛顿大学杰克逊学院攻读日本学硕士。硕士课程结束后他在MSL东京分所从事公共关系工作。"
+msgstr ""
 
 #: myapp/templates/contactus.html:38
 msgid "Donation Support"
-msgstr "支援帮助"
+msgstr ""
 
 #: myapp/templates/contactus.html:39
 msgid "Please donate a small amount to keep us alive"
-msgstr "各位款爷, 请让我感受一下世界的善意"
+msgstr ""
 
 #: myapp/templates/contactus.html:40
 msgid ""
@@ -86,193 +85,191 @@ msgid ""
 "that, we will donate the money to assist children learning computer "
 "science in least developed countries. "
 msgstr ""
-"我们希望借助网络和科技拉。一命二运三风水四积阴德五读书。募捐款项除了用于基本维持网站运行外会捐给慈善基金会资助第三世界国家的小朋友学习计算机科学。感谢您的支持"
-" "
 
 #: myapp/templates/contactus.html:41
 msgid "Join Us?"
-msgstr "加入我们？"
+msgstr ""
 
 #: myapp/templates/contactus.html:43
 msgid "Database Designer"
-msgstr "数据库设计"
+msgstr ""
 
 #: myapp/templates/contactus.html:44
 msgid "Web Application Engineer"
-msgstr "网站制作设计工程师"
+msgstr ""
 
 #: myapp/templates/contactus.html:45
 msgid "Front-end Engineer(Javascript, bootstrap)"
-msgstr "前段工程师(Javascript, bootstrap)"
+msgstr ""
 
 #: myapp/templates/contactus.html:46
 msgid "Back-end server-side Engineer.(Python, php, Flask framework)"
-msgstr "后端全栈及服务器雨呀工程师(Python, php, Flask 网络框架)"
+msgstr ""
 
 #: myapp/templates/contactus.html:47
 msgid "C# and Java (ios/android enginner)"
-msgstr "C#和Java(ios以及安卓工程师)"
+msgstr ""
 
 #: myapp/templates/contactus.html:48
 msgid "Cooperationa and Sponsorship"
-msgstr "任何形式的合作与赞助"
+msgstr ""
 
 #: myapp/templates/info.html:17 myapp/templates/layout.html:61
 msgid "Dashboard"
-msgstr "控制台"
+msgstr ""
 
 #: myapp/templates/info.html:20
 msgid "Here to checkout all your flight schedules and requests."
-msgstr "这里能看到你所有的航班日程以及请求."
+msgstr ""
 
 #: myapp/templates/info.html:23
 msgid "Schedules"
-msgstr "航班日程"
+msgstr ""
 
 #: myapp/templates/info.html:27
 msgid "Flight Number"
-msgstr "航班号"
+msgstr ""
 
 #: myapp/templates/info.html:28 myapp/templates/info.html:66
 #: myapp/templates/thehelp.html:27 myapp/templates/thehelp.html:93
 msgid "From"
-msgstr "起飞地点"
+msgstr ""
 
 #: myapp/templates/info.html:29 myapp/templates/info.html:67
 #: myapp/templates/thehelp.html:28 myapp/templates/thehelp.html:94
 msgid "To"
-msgstr "到达地点"
+msgstr ""
 
 #: myapp/templates/info.html:30 myapp/templates/info.html:68
 #: myapp/templates/thehelp.html:30 myapp/templates/thehelp.html:95
 msgid "Departure Date"
-msgstr "计划日期"
+msgstr ""
 
 #: myapp/templates/info.html:31
 msgid "Join/Delete"
-msgstr "进入/删除"
+msgstr ""
 
 #: myapp/templates/info.html:48 myapp/templates/quote.html:45
 msgid "Join"
-msgstr "进入"
+msgstr ""
 
 #: myapp/templates/info.html:48 myapp/templates/info.html:82
 msgid "Del"
-msgstr "删除"
+msgstr ""
 
 #: myapp/templates/info.html:54 myapp/templates/info.html:109
 msgid "NO REQUEST YET"
-msgstr "暂无请求"
+msgstr ""
 
 #: myapp/templates/info.html:62
 msgid "Requests"
-msgstr "请求"
+msgstr ""
 
 #: myapp/templates/info.html:69 myapp/templates/thehelp.html:31
 #: myapp/templates/thehelp.html:96
 msgid "Pay"
-msgstr "奖励"
+msgstr ""
 
 #: myapp/templates/info.html:70
 msgid "Delete"
-msgstr "删除"
+msgstr ""
 
 #: myapp/templates/info.html:90
 msgid "Your request has been broadcast the following flights:"
-msgstr "已广播你的需求到下列航班："
+msgstr ""
 
 #: myapp/templates/info.html:101
 msgid "No flights available at the moment"
-msgstr "暂无航班"
+msgstr ""
 
 #: myapp/templates/layout.html:62
 msgid "Flight Chat"
-msgstr "航班聊天"
+msgstr ""
 
 #: myapp/templates/layout.html:63
 msgid "Offer Help"
-msgstr "我来帮"
+msgstr ""
 
 #: myapp/templates/layout.html:64
 msgid "User Guide"
-msgstr "使用指南"
+msgstr ""
 
 #: myapp/templates/layout.html:66
 msgid "Settings"
-msgstr "设置"
+msgstr ""
 
 #: myapp/templates/layout.html:68
 msgid "Edit Profile"
-msgstr "编辑资料"
+msgstr ""
 
 #: myapp/templates/layout.html:69 myapp/templates/resetpw.html:10
 msgid "Reset Password"
-msgstr "重置密码"
+msgstr ""
 
 #: myapp/templates/layout.html:70
 msgid "Log Out"
-msgstr "退出"
+msgstr ""
 
 #: myapp/templates/layout.html:74 myapp/templates/layout.html:88
 msgid "Languages"
-msgstr "语言"
+msgstr ""
 
 #: myapp/templates/layout.html:76 myapp/templates/layout.html:90
 msgid "English"
-msgstr "英语"
+msgstr ""
 
 #: myapp/templates/layout.html:77 myapp/templates/layout.html:91
 msgid "Chinese"
-msgstr "中文"
+msgstr ""
 
 #: myapp/templates/layout.html:78 myapp/templates/layout.html:92
 msgid "Japanese"
-msgstr "日语"
+msgstr ""
 
 #: myapp/templates/layout.html:85 myapp/templates/login.html:20
 msgid "Sign Up"
-msgstr "注册"
+msgstr ""
 
 #: myapp/templates/layout.html:86 myapp/templates/login.html:18
 msgid "Log In"
-msgstr "登陆"
+msgstr ""
 
 #: myapp/templates/layout.html:123 myapp/templates/welcome.html:42
 msgid "About"
-msgstr "关于我们"
+msgstr ""
 
 #: myapp/templates/layout.html:124 myapp/templates/welcome.html:44
 msgid "Locations"
-msgstr "地点"
+msgstr ""
 
 #: myapp/templates/layout.html:125 myapp/templates/thehelp.html:32
 #: myapp/templates/thehelp.html:97 myapp/templates/welcome.html:43
 msgid "Contact"
-msgstr "联系我们"
+msgstr ""
 
 #: myapp/templates/layout.html:129
 msgid "ShareJet"
-msgstr "共享航班"
+msgstr ""
 
 #: myapp/templates/login.html:10
 msgid "Yo!Login"
-msgstr "Yo!登陆"
+msgstr ""
 
 #: myapp/templates/mychat.html:21
 msgid "Welcome Onboard"
-msgstr "欢迎乘机"
+msgstr ""
 
 #: myapp/templates/mychat.html:49
 msgid "Request"
-msgstr "我的需求"
+msgstr ""
 
 #: myapp/templates/mychat.html:51
 msgid "To passengers on this flight"
-msgstr "广播给当日此次航班上的乘客"
+msgstr ""
 
 #: myapp/templates/mychat.html:52
 msgid "To passengers on this route"
-msgstr "广播给当日此条路线上的乘客"
+msgstr ""
 
 #: myapp/templates/mychat.html:79 myapp/templates/mychat.html:174
 msgid "All Passengers"
@@ -283,337 +280,206 @@ msgid ""
 "1. Here is the list of people on the same flight with you. If you see no "
 "one in the chatting room, double check if the flight number is right.(eg:"
 " 3U8833)"
-msgstr "1.这些是和你乘坐同一航班的乘客，如果没有人的话可以检查一下航班号是否正确。比如JA001没人的话就试试JA1或者JA01"
+msgstr ""
 
 #: myapp/templates/mychat.html:156
 msgid ""
 "2. As long as you find the right person, you can: Tourgide/travel "
 "company/Package rearrange/Seats exchange/Free ride to downtown..The list "
 "goes on.."
-msgstr "2.在这里你或许可以找到当地的导游，一起去目的地旅行的新朋友。也可能找同一航班的人帮你捎带一下你过重过多的行李，交换一个靠窗的座位。运气好的话可以顺便搭个顺风车去市区等等。"
+msgstr ""
 
 #: myapp/templates/mychat.html:157
 msgid ""
 "3. Click \"All Passengers\" to broadcast your need to people on the same "
 "flight or on the same route"
-msgstr "3.点击左上角的+号便可广播你的需求给特定群组"
+msgstr ""
 
 #: myapp/templates/mychat.html:158
 msgid "4. You can also choose a user to have private conversation."
-msgstr "4.你也可以选择进行私聊或者公聊"
+msgstr ""
 
 #: myapp/templates/mychat.html:159
 msgid "5. Good luck and enjoy your journey!"
-msgstr "5.祝好运, 玩的愉快"
+msgstr ""
 
 #: myapp/templates/mychat.html:183
 msgid "No message yet!"
-msgstr "暂无信息"
+msgstr ""
 
 #: myapp/templates/myprofile.html:20
 msgid "Profile"
-msgstr "个人资料"
+msgstr ""
 
 #: myapp/templates/myprofile.html:23
 msgid "Edit your profile here"
-msgstr "更新你的资料"
+msgstr ""
 
 #: myapp/templates/myprofile.html:34
 msgid "Change"
-msgstr "更新"
+msgstr ""
 
 #: myapp/templates/myprofile.html:50 myapp/templates/resetpw.html:18
 msgid "Confirm"
-msgstr "就这样"
+msgstr ""
 
 #: myapp/templates/myprofile.html:50
 msgid "Back"
-msgstr "返回"
+msgstr ""
 
 #: myapp/templates/officeloc.html:13
 msgid "Location"
-msgstr "地点"
+msgstr ""
 
 #: myapp/templates/officeloc.html:17
 msgid "Chengdu(China)"
-msgstr "中国成都"
+msgstr ""
 
 #: myapp/templates/officeloc.html:18
 msgid "1-5-25, Jieyi Road, Jiniu District"
-msgstr "金牛区解颐路1-5-25"
+msgstr ""
 
 #: myapp/templates/officeloc.html:18
 msgid "Chengdu, Sichuan 610000"
-msgstr "四川省成都市 610000"
+msgstr ""
 
 #: myapp/templates/officeloc.html:34
 msgid "Seattle(U.S)"
-msgstr "美国西雅图"
+msgstr ""
 
 #: myapp/templates/officeloc.html:35
 msgid "535 8th St South, Kirkland"
-msgstr "柯克兰 St South 8号 535室"
+msgstr ""
 
 #: myapp/templates/officeloc.html:35
 msgid "Seattle, WA 98033"
-msgstr "华盛顿州西雅图市 98033"
+msgstr ""
 
 #: myapp/templates/officeloc.html:51
 msgid "Tokyo(Japan)"
-msgstr "日本东京"
+msgstr ""
 
 #: myapp/templates/officeloc.html:52
 msgid "510, 3-27-10 Nukui, Nerima ward"
-msgstr "练马区贯井3-27-10,510号"
+msgstr ""
 
 #: myapp/templates/officeloc.html:52
 msgid "Tokyo, 176-0021"
-msgstr "东京, 176-0021"
+msgstr ""
 
 #: myapp/templates/quote.html:12
 msgid "Search"
-msgstr "搜一个"
+msgstr ""
 
 #: myapp/templates/quote.html:36
 msgid "Join Flight Chat and talk with people on your flight"
-msgstr "加入航班聊天室气氛high起来"
+msgstr ""
 
 #: myapp/templates/quote.html:53
 msgid "Boradcast a delivery request to people on this route."
-msgstr "广播这则消息给这条航线上的人。"
+msgstr ""
 
 #: myapp/templates/quote.html:64
 msgid "Broadcast"
-msgstr "播报"
+msgstr ""
 
 #: myapp/templates/register.html:10 myapp/templates/register.html:17
 msgid "Register"
-msgstr "注册"
+msgstr ""
 
 #: myapp/templates/thehelp.html:16
 msgid "Yo!Helper"
-msgstr "Yo!我来帮"
+msgstr ""
 
 #: myapp/templates/thehelp.html:19
 msgid "These are the people that need your help!"
-msgstr "这些人需要你的帮助!"
+msgstr ""
 
 #: myapp/templates/thehelp.html:22
 msgid "Same Flight"
-msgstr "同一航班"
+msgstr ""
 
 #: myapp/templates/thehelp.html:26 myapp/templates/thehelp.html:92
 msgid "Username"
-msgstr "用户名"
+msgstr ""
 
 #: myapp/templates/thehelp.html:29
 msgid "Flight"
-msgstr "航班号"
+msgstr ""
 
 #: myapp/templates/thehelp.html:53
 msgid "Click the button to join the chatroom or send an email."
-msgstr "点击按钮线上聊天或发送邮件."
+msgstr ""
 
 #: myapp/templates/thehelp.html:59
 msgid "Chat"
-msgstr "聊起来"
+msgstr ""
 
 #: myapp/templates/thehelp.html:72 myapp/templates/thehelp.html:129
 msgid "Email"
-msgstr "邮件"
+msgstr ""
 
 #: myapp/templates/thehelp.html:80 myapp/templates/thehelp.html:137
 msgid "NO ONE NEEDS HELP AT THE MOMENT"
-msgstr "暂无帮忙需求"
+msgstr ""
 
 #: myapp/templates/thehelp.html:88
 msgid "Other Help"
-msgstr "其余帮助"
+msgstr ""
 
 #: myapp/templates/welcome.html:28
 msgid "Building Trust and Connections among world travelloers"
-msgstr "共享航班 共创未来"
+msgstr ""
 
 #: myapp/templates/welcome.html:41
 msgid "Welcome"
-msgstr "欢迎"
+msgstr ""
 
 #: myapp/templates/welcome.html:54
 msgid "Find the people on the Flight."
-msgstr "找到他，聊起来."
+msgstr ""
 
 #: myapp/templates/welcome.html:63
 msgid "Need to send your package right away?"
-msgstr "需要马上寄送物品？"
+msgstr ""
 
 #: myapp/templates/welcome.html:64
 msgid "Worried about your overweight suitcase?"
-msgstr "担心行李箱超重？"
+msgstr ""
 
 #: myapp/templates/welcome.html:65
 msgid "Wanna have a seat by the window?"
-msgstr "想要靠窗的座位？"
+msgstr ""
 
 #: myapp/templates/welcome.html:66
 msgid "Travelling alone and wanna make new friends?"
-msgstr "一个人的旅行想认识新朋友？"
+msgstr ""
 
 #: myapp/templates/welcome.html:67
 msgid "Maybe a free ride from the airport to downtown?"
-msgstr "红眼航班或许能搭上一个同机人的顺风车？"
+msgstr ""
 
 #: myapp/templates/welcome.html:92
 msgid "Find and chat with people on your flight."
-msgstr "找到下一个航班的同机人。"
+msgstr ""
 
 #: myapp/templates/welcome.html:93
 msgid "People on your flight will help to rearrange your large suitcase etc."
-msgstr "让同一航班的人帮你重置你的行李箱。"
+msgstr ""
 
 #: myapp/templates/welcome.html:94
 msgid "Find a taker for your overseas purchasing and broadcast other requests."
-msgstr "海外代购当天送达。"
+msgstr ""
 
 #: myapp/templates/welcome.html:95
 msgid "Trust makes our world better."
-msgstr "信任, 让世界更美好."
+msgstr ""
 
 #: myapp/templates/welcome.html:104
 msgid "Enter"
-msgstr "猛戳"
+msgstr ""
 
 #: myapp/templates/welcome.html:112
 msgid "Copyright"
-msgstr "版权所有"
-
-#~ msgid "About Us"
-#~ msgstr "关于我们"
-
-#~ msgid "Here you just write some bullship introducing ourselves"
-#~ msgstr "这里随便写一些自我介绍吧"
-
-#~ msgid "Waseda University, Japan"
-#~ msgstr "日本早稻田大学"
-
-#~ msgid "University of Washington, U.S"
-#~ msgstr "美国华盛顿大学"
-
-#~ msgid "Office Location"
-#~ msgstr "地点"
-
-#~ msgid "This field is required."
-#~ msgstr ""
-
-#~ msgid "File does not have an approved extension: {extensions}"
-#~ msgstr ""
-
-#~ msgid "File does not have an approved extension."
-#~ msgstr ""
-
-#~ msgid "algorithm"
-#~ msgstr ""
-
-#~ msgid "Invalid field name '%s'."
-#~ msgstr ""
-
-#~ msgid "Field must be equal to %(other_name)s."
-#~ msgstr ""
-
-#~ msgid "Field must be at least %(min)d character long."
-#~ msgid_plural "Field must be at least %(min)d characters long."
-#~ msgstr[0] ""
-
-#~ msgid "Field cannot be longer than %(max)d character."
-#~ msgid_plural "Field cannot be longer than %(max)d characters."
-#~ msgstr[0] ""
-
-#~ msgid "Field must be between %(min)d and %(max)d characters long."
-#~ msgstr ""
-
-#~ msgid "Number must be at least %(min)s."
-#~ msgstr ""
-
-#~ msgid "Number must be at most %(max)s."
-#~ msgstr ""
-
-#~ msgid "Number must be between %(min)s and %(max)s."
-#~ msgstr ""
-
-#~ msgid "Invalid input."
-#~ msgstr ""
-
-#~ msgid "Invalid email address."
-#~ msgstr ""
-
-#~ msgid "Invalid IP address."
-#~ msgstr ""
-
-#~ msgid "Invalid Mac address."
-#~ msgstr ""
-
-#~ msgid "Invalid URL."
-#~ msgstr ""
-
-#~ msgid "Invalid UUID."
-#~ msgstr ""
-
-#~ msgid "Invalid value, must be one of: %(values)s."
-#~ msgstr ""
-
-#~ msgid "Invalid value, can't be any of: %(values)s."
-#~ msgstr ""
-
-#~ msgid "Invalid CSRF Token"
-#~ msgstr ""
-
-#~ msgid "CSRF token missing"
-#~ msgstr ""
-
-#~ msgid "CSRF failed"
-#~ msgstr ""
-
-#~ msgid "CSRF token expired"
-#~ msgstr ""
-
-#~ msgid "Not a valid choice"
-#~ msgstr ""
-
-#~ msgid "Not a valid list"
-#~ msgstr ""
-
-#~ msgid "Not a valid integer list"
-#~ msgstr ""
-
-#~ msgid "Please input a date/time value"
-#~ msgstr ""
-
-#~ msgid "Invalid date/time input"
-#~ msgstr ""
-
-#~ msgid "Invalid Choice: could not coerce"
-#~ msgstr ""
-
-#~ msgid "Invalid choice(s): one or more data inputs could not be coerced"
-#~ msgstr ""
-
-#~ msgid "'%(value)s' is not a valid choice for this field"
-#~ msgstr ""
-
-#~ msgid "Not a valid integer value"
-#~ msgstr ""
-
-#~ msgid "Not a valid decimal value"
-#~ msgstr ""
-
-#~ msgid "Not a valid float value"
-#~ msgstr ""
-
-#~ msgid "Not a valid datetime value"
-#~ msgstr ""
-
-#~ msgid "Not a valid date value"
-#~ msgstr ""
-
-#~ msgid "Find and then chat with people on your flight."
-#~ msgstr "找到同机人，提出你的需求。"
+msgstr ""
 

@@ -34,6 +34,7 @@ app.extensions['bootstrap']['cdns']['jquery'] = WebCDN('//cdn.bootcss.com/jquery
 #SET THE DEFAULT LANGUAGE FOR FLASK-BABEL
 """
 if app.config["DEBUG"]:
+    print ('----------CAUTION: YOU ARE NOW IN DEBUG MODE--------')
     @app.after_request
     def after_request(response):
         response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"

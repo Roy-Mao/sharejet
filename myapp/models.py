@@ -1,4 +1,4 @@
-from app import db
+from myapp import db
 from flask_login import UserMixin
 
 class History(db.Model):

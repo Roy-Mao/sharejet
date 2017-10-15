@@ -96,21 +96,33 @@ root
 |   |   |   messages.po
 ```
 
-## Concerns
-I am not a CS major, the code might be very dirty and unorganized, please tell me where should I improve and your tolerance is highly appreciated.
-
-
 ## Questions
-Please contact me if you have any concerns when colaborating this project
+You can contact me if you have and concerns or questions regarding to  this web application.
 
-* Email:(ruoyu.mao#icloud.com, change # to @)
 * facebook: [@Roymao](https://www.facebook.com/ruoyu.mao)
-* github: [@Roymao](https://github.com/Roy-Mao)
+* email: <ruoyu.mao@icloud.com>
+* WeCaht:    
+    ![Imgur](https://i.imgur.com/hGWmAef.jpg)
+* Line:  
+    ![Imgur](https://i.imgur.com/r8KSz5S.jpg)
+
+## To be improved
+* Need better Database design and native application support for better user experience.
+* More rigerous user input check. eg:space at the end of email should be illegal.
+* More languages support(Spanish/German) and theme available in the future.
+* I find it difficult to fully understand flask-socketio. Worried that this app won't work smoothly if users amount reach a certain level.
+ Heroku seems to be blocked by the great fire wall. Maybe need to use another Pass instead of Heroku to have better access to mainland China.
+* Difficult to get the flight number info so that there is no way validating the flight number a user entered is correct or not. The user is responsible to make sure if the flight number they entered is absolutely correct.
+* I know my python code is way too dirty. Please help me correct my code after laughing at me.
+* [Roy's github](https://github.com/Roy-Mao/sharejet)
 
 ## Appreciation
-Special thanks to mercuri/souzoh for the skill set test.
+Special thanks to:
 
 * [CS50 Community](https://www.facebook.com/cs50/)
 * [David J. Malan ](https://cs.harvard.edu/malan/) 
+* [Ryan Brill](https://www.facebook.com/cs50/)
+* [Miguel Grinberg Flask Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+* [Pretty Print youtube videos](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ)
 
 

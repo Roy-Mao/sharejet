@@ -195,9 +195,9 @@ ShareJet是我CS课程的个人项目
  
 * **検索ページにフライト情報を入れて探す:**
    * チャットルームに入って同じフライトに搭乗する人を探してチャットする
-   * 特定のルートとフライトに搭乗する人を探して郵送サービスを頼む
+   * 特定のルートとフライトに搭乗する人を探して郵送サービスを頼む　　
     
-    ![[Imgur](https://i.imgur.com/vxwrr7X.jpg)
+   ![[Imgur](https://i.imgur.com/vxwrr7X.jpg)
 
 * **チャットルームに入った後：**
     * 同じフライトに搭乗する人と話すことができる
@@ -235,13 +235,13 @@ ShareJet是我CS课程的个人项目
  * フライト番号についての情報を（無料で）手にいれることが難しいですが、ユーザ入力されたフライト番号が正しいかどかサーバサイドから確認できないため、ユーザ側フライト番号を正しく入力しなければならない。
  * 汚いコードですけど、助けてくれば幸いです。
 
-##感謝
+## 感謝
 スペシャルサンクス：
 
 * [CS50 Community](https://www.facebook.com/cs50/)
 * [David J. Malan ](https://cs.harvard.edu/malan/) 
 * [Ryan Brill](https://www.facebook.com/cs50/)
 * [Miguel Grinberg Flask Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
-* [Pretty Print youtube videos](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ)
+* [Pretty Print youtube videos](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ)  
 
 --------------------    

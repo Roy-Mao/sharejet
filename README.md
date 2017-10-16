@@ -19,7 +19,7 @@ Share-Jet is an open source  project that can help you find people on the next f
 * Database: Postgres(9.6.5)
 * FileStorage: AWS S3  
 * Deployed on Heroku
-* Website: https://rocky-savannah-96297.herokuapp.com
+* Website: https://sharejet.herokuapp.com
 
 
 
@@ -39,61 +39,65 @@ root
 |   requirements.txt
 |   settings.cfg
 |
-└───__pycache__
-│   │   application.cpython-36.pyc
-|   |   helpers.cpython-36.pyc
+└───myapp
+|  |  __init.py__
+|  |  configmodule.py
+|  |  flaskform.py
+|  |  messages.pot
+|  |  models.py
+|  |  views.py
 |
-└───static
-|   │   img
-|   │   aboutus.css
-|   |   bugcs.css
-|   |   contactus.css
-|   |   favicon.ico
-|   |   ie1--viewport-bug-workaround.js
-|   |   ihover.min.css
-|   |   info.js
-|   |   jquery.emojipicker.a.css
-|   |   jquery.emojipicker.css
-|   |   jquery.emojipicker.js
-|   |   jquery.emojis.js
-|   |   jquery.rotate.js
-|   |   lanset.js
-|   |   mychat.css
-|   |   mychat.js
-|   |   myprofile.css
-|   |   myprofile.js
-|   |   officeloc.css
-|   |   quote.js
-|   |   styles.css
-|   |   userguid.js
-|   |   welcome.css
-|
-└───templates
-|   |   _formhelpers.html
-|   |   aboutus.html
-|   |   apology.html
-|   |   contactus.html
-|   |   info.html
-|   |   layout.html
-|   |   login.html
-|   |   mychat.html
-|   |   myprofile.html
-|   |   officeloc.html
-|   |   quote.html
-|   |   register.html
-|   |   resetpw.html
-|   |   thehelp.html
-|   |   upload.html
-|   |   welcome.html
-|
-└───translations
-|   └───ja/LC_MESSAGES
-|   |   |   messages.mo
-|   |   |   messages.po
-|   |   
-|   └───zh_CN/LC_MESSAGES
-|   |   |   messages.mo
-|   |   |   messages.po
+|  └───static
+|  │   img
+|  │   aboutus.css
+|  |   bugcs.css
+|  |   contactus.css
+|  |   favicon.ico
+|  |   ie1--viewport-bug-workaround.js
+|  |   ihover.min.css
+|  |   info.js
+|  |   jquery.emojipicker.a.css
+|  |   jquery.emojipicker.css
+|  |   jquery.emojipicker.js
+|  |   jquery.emojis.js
+|  |   jquery.rotate.js
+|  |   lanset.js
+|  |   mychat.css
+|  |   mychat.js
+|  |   myprofile.css
+|  |   myprofile.js
+|  |   officeloc.css
+|  |   quote.js
+|  |   styles.css
+|  |   userguid.js
+|  |   welcome.css
+|  |
+|  └───templates
+|  |   _formhelpers.html
+|  |   aboutus.html
+|  |   apology.html
+|  |   contactus.html
+|  |   info.html
+|  |   layout.html
+|  |   login.html
+|  |   mychat.html
+|  |   myprofile.html
+|  |   officeloc.html
+|  |   quote.html
+|  |   register.html
+|  |   resetpw.html
+|  |   thehelp.html
+|  |   upload.html
+|  |   welcome.html
+|  |
+|  └───translations
+|  └───ja/LC_MESSAGES
+|  |   |   messages.mo
+|  |   |   messages.po
+|  |   
+|  └───zh_CN/LC_MESSAGES
+|  |   |   messages.mo
+|  |   |   messages.po
 ```
 
 ## Questions

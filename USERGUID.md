@@ -76,6 +76,7 @@ Special thanks to:
 * [CS50 Community](https://www.facebook.com/cs50/)
 * [David J. Malan ](https://cs.harvard.edu/malan/) 
 * [Ryan Brill](https://www.facebook.com/cs50/)
+* [Tomohiro Tadokoro](https://www.facebook.com/tomohiro.tadokoro.1?fref=gm&dti=493570841002788&hc_location=group)
 * [Miguel Grinberg Flask Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 * [Pretty Print youtube videos](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ)
 
@@ -159,6 +160,7 @@ ShareJet是我CS课程的个人项目
 * [CS50 Community](https://www.facebook.com/cs50/)
 * [David J. Malan ](https://cs.harvard.edu/malan/) 
 * [Ryan Brill](https://www.facebook.com/cs50/)
+* [Tomohiro Tadokoro](https://www.facebook.com/tomohiro.tadokoro.1?fref=gm&dti=493570841002788&hc_location=group)
 * [Miguel Grinberg Flask Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 * [Pretty Print youtube videos](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ)
 
@@ -242,6 +244,7 @@ ShareJet是我CS课程的个人项目
 * [CS50 Community](https://www.facebook.com/cs50/)
 * [David J. Malan ](https://cs.harvard.edu/malan/) 
 * [Ryan Brill](https://www.facebook.com/cs50/)
+* [Tomohiro Tadokoro](https://www.facebook.com/tomohiro.tadokoro.1?fref=gm&dti=493570841002788&hc_location=group)
 * [Miguel Grinberg Flask Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
 * [Pretty Print youtube videos](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ)  
 

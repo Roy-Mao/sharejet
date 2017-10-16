@@ -30,14 +30,13 @@ root
 │   .gitignore
 |   Procfile
 |   README.md
+|   USERGUID.md
 |   airports.csv
-|   application.py
 |   babel.cfg
 |   helpers.py
-|   messages.pot
 |   postgresv1.db
 |   requirements.txt
-|   settings.cfg
+|   run.py
 |
 └───myapp
 |  |  __init.py__

@@ -185,9 +185,10 @@ ShareJet是我CS课程的个人项目
         ![Imgur](https://i.imgur.com/bngvujU.jpg)
 
 * **自分のフライト予定を入力する**
-    *  スケジュールに自分が搭乗する飛行機情報を載せる
+    *  スケジュールに自分が搭乗する飛行機情報を載せる  
     
         ![Imgur](https://i.imgur.com/iS4k7ha.jpg)
+        
     * 自分の要望の記入する
     
         ![Imgur](https://i.imgur.com/1iKle41.jpg)
@@ -197,7 +198,7 @@ ShareJet是我CS课程的个人项目
    * チャットルームに入って同じフライトに搭乗する人を探してチャットする
    * 特定のルートとフライトに搭乗する人を探して郵送サービスを頼む　　
     
-   ![[Imgur](https://i.imgur.com/vxwrr7X.jpg)
+   ![Imgur](https://i.imgur.com/vxwrr7X.jpg)
 
 * **チャットルームに入った後：**
     * 同じフライトに搭乗する人と話すことができる

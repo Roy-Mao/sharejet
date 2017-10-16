@@ -84,7 +84,7 @@ Special thanks to:
 
 <img src="https://i.imgur.com/FABr4FC.png" border-radius="20px" alt="Roy" title="GitHub,Social Coding" width="100" height="100" />
 
-##什么是ShareJet
+## 什么是ShareJet
 ShareJet是我CS课程的个人项目
 
 1. 你可以在旅行前找到和你搭乘同一航班的人：
@@ -167,7 +167,7 @@ ShareJet是我CS课程的个人项目
 
 <img src="https://i.imgur.com/FABr4FC.png" border-radius="20px" alt="Roy" title="GitHub,Social Coding" width="100" height="100" />
 
-##ShareJetとは
+## ShareJetとは
 
 1. 旅する前にフライトの同乗者を探してチャットするアプリ  
  * 多すぎる荷物をを同乗者のスーツケースに入れる

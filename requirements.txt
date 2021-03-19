@@ -31,7 +31,7 @@ idna==2.6
 infinity==1.4
 intervals==0.8.0
 itsdangerous==0.24
-Jinja2==2.9.6
+Jinja2==2.11.3
 jmespath==0.9.3
 jsonpickle==0.9.4
 MarkupSafe==1.0
